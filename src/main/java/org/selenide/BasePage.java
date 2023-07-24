@@ -1,0 +1,34 @@
+package org.selenide;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class BasePage {
+
+    private static final ThreadLocal<WebDriver> DRIVER_THREAD_LOCAL = new ThreadLocal<>();
+
+    public static ThreadLocal<WebDriver> getDriverThreadLocal() {
+        return DRIVER_THREAD_LOCAL;
+    }
+
+    public static void setDriverThreadLocal(WebDriver webDriver) {
+        DRIVER_THREAD_LOCAL.set(webDriver);
+    }
+
+    public static WebDriver getDriver() {
+        return DRIVER_THREAD_LOCAL.get();
+    }
+
+    public static JavascriptExecutor getJavascriptExecutor() {
+        return (JavascriptExecutor) getDriver();
+    }
+
+    public static void makeClick(WebElement element) {
+        getJavascriptExecutor().executeScript("arguments[0].click();", element);
+    }
+    public void setAttribute(WebElement element, String attName, String attValue) {
+        getJavascriptExecutor().executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
+                element, attName, attValue);
+    }
+}

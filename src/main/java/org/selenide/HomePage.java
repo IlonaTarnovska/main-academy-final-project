@@ -35,6 +35,11 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//ul[@class='dropdown-menu hidden-sm-down']/*")
     public List<WebElement> dropdownLanguages;
 
+    @FindBy(xpath = "//span[@class='hidden-sm-down']")
+    public WebElement signInButton;
+
+    @FindBy(xpath = "//a[@class='account']/span[@class='hidden-sm-down']")
+    public WebElement loggedInUserName;
 
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
@@ -72,6 +77,14 @@ public class HomePage extends BasePage {
             }
         }
         return isLangPresent;
+    }
+
+    public void clickSignInButton() {
+        makeClick(signInButton);
+    }
+
+    public String getLoggedInUserName() {
+        return loggedInUserName.getText();
     }
 }
 

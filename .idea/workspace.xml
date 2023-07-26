@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented test#0 using BDD&#10;Implemented test#1 using BDD">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented #1 test&#10;Started #2 test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/RegisterPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationValidDataStepDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/RegistrationValidDataCheck.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/Hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/Hooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +50,7 @@
       <recent name="org.selenide" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: SubscriptionMessagesCheck">
+  <component name="RunManager" selected="Cucumber Java.Feature: RegistrationValidDataCheck">
     <configuration name="Feature: BrandsLinkCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/BrandsLinkCheck.feature" />
@@ -89,14 +89,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: SubscriptionMessagesCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: RegistrationValidDataCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/RegistrationValidDataCheck.feature" />
       <option name="GLUE" value="stepDefs org.Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="final-project" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: SubscriptionMessagesCheck" />
+      <option name="SUGGESTED_NAME" value="Feature: RegistrationValidDataCheck" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -108,14 +108,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Brands link check" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: SubscriptionMessagesCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/BrandsLinkCheck.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" />
+      <option name="GLUE" value="stepDefs org.Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="final-project" />
-      <option name="NAME_FILTER" value="^Brands link check$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Brands link check$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Brands link check" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: SubscriptionMessagesCheck" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -148,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: RegistrationValidDataCheck" />
         <item itemvalue="Cucumber Java.Feature: SubscriptionMessagesCheck" />
         <item itemvalue="Cucumber Java.Feature: LanguagesCheck" />
         <item itemvalue="Cucumber Java.Feature: BrandsLinkCheck" />
         <item itemvalue="Cucumber Java.Scenario: Forgotten pass check" />
-        <item itemvalue="Cucumber Java.Scenario: Brands link check" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689801903957</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implemented #1 test&#10;Started #2 test">
+      <created>1690387111245</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690387111245</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,15 +195,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implemented test#0 using BDD&#10;Implemented test#1 using BDD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented test#0 using BDD&#10;Implemented test#1 using BDD" />
+    <MESSAGE value="Implemented #1 test&#10;Started #2 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented #1 test&#10;Started #2 test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java</url>
-          <line>62</line>
+          <line>67</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/selenide/RegisterPage.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

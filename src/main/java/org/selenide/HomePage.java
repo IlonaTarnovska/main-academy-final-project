@@ -1,12 +1,12 @@
 package org.selenide;
 
-import org.assertj.core.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.time.Duration;
 import java.util.List;
 import java.util.Locale;
 
@@ -16,10 +16,16 @@ public class HomePage extends BasePage {
         PageFactory.initElements(getDriver(), this);
     }
 
-    @FindBy(xpath = "//p[@id=block-newsletter-label]")
+    @FindBy(xpath = "//div[@id='loadingMessage']")
+    private WebElement loadingMessage;
+
+    @FindBy(xpath = "//iframe[@id='framelive']")
+    private WebElement iframeFrameOfDemoShop;
+
+    @FindBy(xpath = "//p[@id='block-newsletter-label']")
     private WebElement newsLetterLabel;
 
-    @FindBy(xpath = "//div[@class='row'][2]/div[@class='col-xs-12']/p")
+    @FindBy(xpath = "//div[@class='col-md-7 col-xs-12']/form/div/div[2]/p")
     private WebElement unsubscribeMessage;
 
 
@@ -32,6 +38,10 @@ public class HomePage extends BasePage {
 
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
+        //wait for page loading
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.invisibilityOf(loadingMessage));
+        getDriver().switchTo().frame(iframeFrameOfDemoShop);
     }
 
     public String getNewsLetterLabelText() {

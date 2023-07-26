@@ -3,6 +3,10 @@ package org.selenide;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class BasePage {
 
@@ -30,5 +34,10 @@ public class BasePage {
     public void setAttribute(WebElement element, String attName, String attValue) {
         getJavascriptExecutor().executeScript("arguments[0].setAttribute(arguments[1], arguments[2]);",
                 element, attName, attValue);
+    }
+
+    public WebElement waitVisibility(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+        return wait.until(ExpectedConditions.visibilityOf(element));
     }
 }

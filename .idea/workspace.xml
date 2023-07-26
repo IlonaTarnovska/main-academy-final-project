@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented test#0 using BDD&#10;Implemented test#1 using BDD">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/LanguagesStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SubscriptionStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/LanguagesCheck.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/BrandsPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ForgotPassPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/LoginPage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/MainPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/Hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/Hooks/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/BrandsPageStepDefinitions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/ForgotPassStepDefinitions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/MainPageStepDefinitions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/BrandsLinkCheck.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ForgottenPassCheck.feature" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +50,7 @@
       <recent name="org.selenide" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: LanguagesCheck">
+  <component name="RunManager" selected="Cucumber Java.Feature: SubscriptionMessagesCheck">
     <configuration name="Feature: BrandsLinkCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/BrandsLinkCheck.feature" />
@@ -161,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: LanguagesCheck" />
         <item itemvalue="Cucumber Java.Feature: SubscriptionMessagesCheck" />
+        <item itemvalue="Cucumber Java.Feature: LanguagesCheck" />
         <item itemvalue="Cucumber Java.Feature: BrandsLinkCheck" />
         <item itemvalue="Cucumber Java.Scenario: Forgotten pass check" />
         <item itemvalue="Cucumber Java.Scenario: Brands link check" />
@@ -208,7 +195,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java</url>
-          <line>52</line>
+          <line>62</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

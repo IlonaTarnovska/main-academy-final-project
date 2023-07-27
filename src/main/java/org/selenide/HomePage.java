@@ -58,10 +58,8 @@ public class HomePage extends BasePage {
     }
 
     public boolean checkUpperCase() {
-        String buttonText = subscribeButton.getText();
-        String upperCasedButton = buttonText.toUpperCase(Locale.ROOT);
-
-        return buttonText.equals(upperCasedButton);
+        String textTransform = subscribeButton.getCssValue("text-transform");;
+        return textTransform.equals("uppercase");
     }
 
     public int getLanguagesCount() {

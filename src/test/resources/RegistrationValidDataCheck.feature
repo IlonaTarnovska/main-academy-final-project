@@ -1,4 +1,4 @@
-Feature: Registration check
+Feature: Registration valid data check
 
   Scenario: Registration with valid data
     Given I am on the home page

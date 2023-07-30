@@ -7,8 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class HomePage extends BasePage {
 
@@ -41,6 +41,24 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@class='account']/span[@class='hidden-sm-down']")
     public WebElement loggedInUserName;
 
+    @FindBy(xpath = "//li[@id='category-3']/a")
+    public WebElement clothesButton;
+
+    @FindBy(xpath = "//li[@id='category-3']/div/ul/*")
+    public List<WebElement> clothesPopUp;
+
+    @FindBy(xpath = "//li[@id='category-6']/a")
+    public WebElement accessoriesButton;
+
+    @FindBy(xpath = "//li[@id='category-6']/div/ul/*")
+    public List<WebElement> accessoriesPopUp;
+
+    @FindBy(xpath = "//li[@id='category-9']/a")
+    public WebElement artButton;
+
+    @FindBy(xpath = "//li[@id='category-9']/div/ul/*")
+    public List<WebElement> artPopUp;
+
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
         //wait for page loading
@@ -70,7 +88,7 @@ public class HomePage extends BasePage {
         boolean isLangPresent = false;
         for (int i = 0; i < dropdownLanguages.size(); i++) {
             String language = dropdownLanguages.get(i).getText();
-            if (language.equals(expectedLanguage)){
+            if (language.equals(expectedLanguage)) {
                 isLangPresent = true;
             }
         }
@@ -83,6 +101,44 @@ public class HomePage extends BasePage {
 
     public String getLoggedInUserName() {
         return loggedInUserName.getText();
+    }
+
+    public void hoverMouseOnClothesButton() {
+        hoverMouse(clothesButton);
+    }
+
+    public void hoverMouseOnAccessoriesButton() {
+        hoverMouse(accessoriesButton);
+    }
+    public void hoverMouseOnArtButton() {
+        hoverMouse(artButton);
+    }
+
+    public List<String> getClothesDropdownElement() {
+        ArrayList<String> texts = new ArrayList<String>();
+        for (int i = 0; i < clothesPopUp.size(); i++) {
+            String text = clothesPopUp.get(i).getText();
+            texts.add(text);
+        }
+        return texts;
+    }
+
+    public List<String> getAccessoriesDropdownElement() {
+        ArrayList<String> texts = new ArrayList<String>();
+        for (int i = 0; i < accessoriesPopUp.size(); i++) {
+            String text = accessoriesPopUp.get(i).getText();
+            texts.add(text);
+        }
+        return texts;
+    }
+
+    public List<String> getArtDropdownElement() {
+        ArrayList<String> texts = new ArrayList<String>();
+        for (int i = 0; i < artPopUp.size(); i++) {
+            String text = artPopUp.get(i).getText();
+            texts.add(text);
+        }
+        return texts;
     }
 }
 

@@ -3,6 +3,7 @@ package org.selenide;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -39,5 +40,10 @@ public class BasePage {
     public WebElement waitVisibility(WebElement element) {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
         return wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
+    public static void hoverMouse(WebElement element) {
+        Actions action = new Actions(getDriver());
+        action.moveToElement(element).perform();
     }
 }

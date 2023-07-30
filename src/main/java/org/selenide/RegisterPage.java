@@ -34,7 +34,10 @@ public class RegisterPage extends BasePage{
     @FindBy(xpath = "//button[@class='btn btn-primary form-control-submit float-xs-right']")
     public static WebElement saveButtonElement;
 
-    public void fillValidData(
+    @FindBy(xpath = "//li[@class='alert alert-danger']")
+    public static WebElement invalidMessage;
+
+    public void fillRegistrationData(
             String firstName,
             String lastName,
             String email,
@@ -52,5 +55,13 @@ public class RegisterPage extends BasePage{
 
     public void clickSaveButton(){
         makeClick(saveButtonElement);
+    }
+
+    public String getNameOutlineColor(){
+        return fNameElement.getCssValue("outline-color");
+    }
+
+    public boolean isPopUpMessageAppears(){
+       return invalidMessage.isDisplayed();
     }
 }

@@ -8,7 +8,7 @@ import org.selenide.HomePage;
 import org.selenide.LoginPage;
 import org.selenide.RegisterPage;
 
-public class RegistrationValidDataStepDefinitions {
+public class RegistrationStepDefinitions {
 
     // Test case #3 (Registration with valid data)
     //
@@ -35,7 +35,12 @@ public class RegistrationValidDataStepDefinitions {
 
     @And("I fill the form with valid data")
     public void fillRegistrationForm() {
-        registerPage.fillValidData("John", "Doe", "johndoe@example.com", "AbRaCaDaBrA69$$$@");
+        registerPage.fillRegistrationData(
+                "John",
+                "Doe",
+                "johndoe@example.com",
+                "AbRaCaDaBrA69$$$@"
+        );
     }
 
     @And("I click on 'Save' button")

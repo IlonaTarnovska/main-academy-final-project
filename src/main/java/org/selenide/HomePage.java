@@ -1,13 +1,16 @@
 package org.selenide;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.selenide.utils.Utils;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class HomePage extends BasePage {
@@ -27,7 +30,6 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//div[@class='col-md-7 col-xs-12']/form/div/div[2]/p")
     private WebElement unsubscribeMessage;
-
 
     @FindBy(xpath = "//input[@class='btn btn-primary float-xs-right hidden-xs-down']")
     public WebElement subscribeButton;
@@ -58,6 +60,12 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//li[@id='category-9']/div/ul/*")
     public List<WebElement> artPopUp;
+
+    @FindBy(xpath = "//div[@class='products row']")
+    public WebElement popularProductsContainer;
+
+    @FindBy(xpath = "//div[@class='products row']/*")
+    public List<WebElement> popularProducts;
 
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
@@ -133,12 +141,40 @@ public class HomePage extends BasePage {
     }
 
     public List<String> getArtDropdownElement() {
-        ArrayList<String> texts = new ArrayList<String>();
+        ArrayList<String> texts = new ArrayList<>();
         for (int i = 0; i < artPopUp.size(); i++) {
             String text = artPopUp.get(i).getText();
             texts.add(text);
         }
         return texts;
+    }
+
+    public int getPopularProductsCount() {
+        return popularProducts.size();
+    }
+
+    public int getProductNamesCount() {
+        By priceXpath = By.xpath(".//div[@class='product-description']/h3[@class='h3 product-title']");
+        List<WebElement> names = popularProductsContainer.findElements(priceXpath);
+        return names.size();
+    }
+
+    public int getProductPriceCount() {
+        return getProductPrices().size();
+    }
+
+    public List<Float> getProductPrices() {
+        ArrayList<Float> prices = new ArrayList<>();
+        By priceXpath = By.xpath(".//div[@class='product-price-and-shipping']/span[@class='price']");
+        List<WebElement> webPrices = popularProductsContainer.findElements(priceXpath);
+        for (WebElement element: webPrices) {
+            try {
+                prices.add(Utils.convertPrice(element.getText()));
+            } catch (Exception e) {
+            }
+        }
+        System.out.println(Arrays.toString(prices.toArray()));
+        return prices;
     }
 }
 

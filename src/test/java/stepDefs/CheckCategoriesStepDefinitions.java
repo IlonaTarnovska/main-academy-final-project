@@ -1,6 +1,7 @@
 package stepDefs;
 
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.Assertions;
 import org.selenide.HomePage;
@@ -9,6 +10,16 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CheckCategoriesStepDefinitions {
+
+    //Test case #5 (Check categories)
+    //
+    // Go to the https://demo.prestashop.com/
+    // Hover mouse over 'CLOTHES'
+    // Check that 'MEN' and 'WOMEN' sub menu items appears
+    // Hover mouse over 'ACCESSORIES'
+    // Check that 'STATIONERY' and 'HOME ACCESSORIES' sub menu items appears
+    // Hover mouse over 'ART'
+    // Check that no any sub category appears
 
     HomePage homePage = new HomePage();
 
@@ -26,7 +37,7 @@ public class CheckCategoriesStepDefinitions {
                 .isEqualTo(expected);
     }
 
-    @When("I hover mouse over 'ACCESSORIES'")
+    @And("I hover mouse over 'ACCESSORIES'")
     public void hoverMouseAccessories() {
         homePage.hoverMouseOnAccessoriesButton();
     }
@@ -40,12 +51,12 @@ public class CheckCategoriesStepDefinitions {
                 .isEqualTo(expected);
     }
 
-    @When("I hover mouse over 'ART'")
+    @And("I hover mouse over 'ART'")
     public void hoverMouseArt() {
         homePage.hoverMouseOnArtButton();
     }
 
-    @And("I check that no any sub category appears")
+    @Then("I check that no any sub category appears")
     public void checkArtItems() {
         int actualSize = homePage.getArtDropdownElement().size();
 

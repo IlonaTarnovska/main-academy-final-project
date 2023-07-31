@@ -67,6 +67,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@class='products row']/*")
     public List<WebElement> popularProducts;
 
+    @FindBy(xpath = "//a[@id='link-product-page-prices-drop-1']")
+    public WebElement pricesDropLink;
+
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
         //wait for page loading
@@ -175,6 +178,10 @@ public class HomePage extends BasePage {
         }
         System.out.println(Arrays.toString(prices.toArray()));
         return prices;
+    }
+
+    public void pricesDropLinkClick() {
+        makeClick(pricesDropLink);
     }
 }
 

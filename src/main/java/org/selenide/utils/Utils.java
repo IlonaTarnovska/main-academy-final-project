@@ -9,4 +9,10 @@ public class Utils {
         return Float.parseFloat(filtered);
     }
 
+    public static Float convertDiscount(String discount) {
+        String filtered = discount.replaceAll("-", "")
+                .replaceAll("%", "");
+        return Float.parseFloat(filtered);
+    }
+
 }

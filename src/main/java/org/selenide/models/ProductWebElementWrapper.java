@@ -12,6 +12,17 @@ public class ProductWebElementWrapper {
         this.root = element;
     }
 
+    public String getName(){
+        By nameXpath = By.xpath(".//h2[@class='h3 product-title']");
+        String name = "";
+        try {
+            WebElement element = root.findElement(nameXpath);
+            name = element.getText();
+        } catch (Exception e) {
+        }
+        return name;
+
+    }
     public Float getNewPrice() {
         return getPrice(".//div[@class='product-price-and-shipping']/span[@class='price']");
     }

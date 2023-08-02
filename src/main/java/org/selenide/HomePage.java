@@ -70,6 +70,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//a[@id='link-product-page-prices-drop-1']")
     public WebElement pricesDropLink;
 
+    @FindBy(xpath = "//a[@class='all-product-link float-xs-left float-md-right h4']")
+    public WebElement allProductsLink;
+
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
         //wait for page loading
@@ -183,6 +186,11 @@ public class HomePage extends BasePage {
     public void pricesDropLinkClick() {
         makeClick(pricesDropLink);
     }
+
+    public void clickAllProductsLink() {
+        makeClick(allProductsLink);
+    }
+
 }
 
 

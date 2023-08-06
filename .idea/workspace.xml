@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented #7 test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" afterDir="false" />
+    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Started #8 test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +48,7 @@
       <recent name="org.selenide" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: SortingCheck">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Check sorting products">
     <configuration name="Feature: CategoriesCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/CategoriesCheck.feature" />
@@ -90,15 +87,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Check pop up categories" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Check price drop" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/CategoriesCheck.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/PriceDropCheck.feature" />
       <option name="GLUE" value="stepDefs org.Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="final-project" />
-      <option name="NAME_FILTER" value="^Check pop up categories$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check pop up categories$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Check pop up categories" />
+      <option name="NAME_FILTER" value="^Check price drop$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check price drop$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Check price drop" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -110,15 +107,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Check price drop" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Check sorting products" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/PriceDropCheck.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" />
       <option name="GLUE" value="stepDefs org.Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="final-project" />
-      <option name="NAME_FILTER" value="^Check price drop$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check price drop$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Check price drop" />
+      <option name="NAME_FILTER" value="^Check sorting products$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check sorting products$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Check sorting products" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -152,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Check sorting products" />
         <item itemvalue="Cucumber Java.Feature: SortingCheck" />
         <item itemvalue="Cucumber Java.Scenario: Check price drop" />
         <item itemvalue="Cucumber Java.Scenario: Checking products" />
         <item itemvalue="Cucumber Java.Feature: CategoriesCheck" />
-        <item itemvalue="Cucumber Java.Scenario: Check pop up categories" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690828912599</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Started #8 test">
+      <created>1691008496027</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691008496027</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,7 +252,8 @@
     <MESSAGE value="Implemented #5 test" />
     <MESSAGE value="Implemented #6 test" />
     <MESSAGE value="Implemented #7 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented #7 test" />
+    <MESSAGE value="Started #8 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started #8 test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -270,18 +275,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="13" />
+          <line>95</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

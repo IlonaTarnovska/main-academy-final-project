@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Started #8 test">
+    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented #8 test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/SearchResultsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,15 +51,15 @@
       <recent name="org.selenide" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Check sorting products">
-    <configuration name="Feature: CategoriesCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Feature: AddingToCartCheck">
+    <configuration name="Feature: AddingToCartCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/CategoriesCheck.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" />
       <option name="GLUE" value="stepDefs org.Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="final-project" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: CategoriesCheck" />
+      <option name="SUGGESTED_NAME" value="Feature: AddingToCartCheck" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -149,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: AddingToCartCheck" />
         <item itemvalue="Cucumber Java.Scenario: Check sorting products" />
         <item itemvalue="Cucumber Java.Feature: SortingCheck" />
         <item itemvalue="Cucumber Java.Scenario: Check price drop" />
         <item itemvalue="Cucumber Java.Scenario: Checking products" />
-        <item itemvalue="Cucumber Java.Feature: CategoriesCheck" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691008496027</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implemented #8 test">
+      <created>1691319200153</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1691319200153</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,7 +263,8 @@
     <MESSAGE value="Implemented #6 test" />
     <MESSAGE value="Implemented #7 test" />
     <MESSAGE value="Started #8 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started #8 test" />
+    <MESSAGE value="Implemented #8 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented #8 test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -274,9 +285,9 @@
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java</url>
-          <line>95</line>
-          <option name="timeStamp" value="14" />
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

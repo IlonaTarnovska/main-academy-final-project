@@ -1,6 +1,7 @@
 package org.selenide;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -72,6 +73,9 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//a[@class='all-product-link float-xs-left float-md-right h4']")
     public WebElement allProductsLink;
+
+    @FindBy(xpath = "//input[@class='ui-autocomplete-input']")
+    public WebElement searchField;
 
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
@@ -190,6 +194,15 @@ public class HomePage extends BasePage {
     public void clickAllProductsLink() {
         makeClick(allProductsLink);
     }
+
+    public void fillSearchField(String text) {
+        searchField.sendKeys("value", text);
+    }
+
+    public void enterSearchField() {
+        searchField.sendKeys(Keys.ENTER);
+    }
+
 
 }
 

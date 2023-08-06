@@ -63,4 +63,8 @@ public class ProductWebElementWrapper {
         String formattedNewPrice = String.format("%.02f", newPrice);
         return formattedNewPrice.equals(String.format("%.02f", getNewPrice()));
     }
+
+    public WebElement getClickableArea() {
+        return root.findElement(By.xpath(".//h2[@class='h3 product-title']/a"));
+    }
 }

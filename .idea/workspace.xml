@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented #8 test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/SearchResultsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java" afterDir="false" />
-    </list>
+    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented #9 test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691319200153</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Implemented #9 test">
+      <created>1691341110167</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1691341110167</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +263,8 @@
     <MESSAGE value="Implemented #7 test" />
     <MESSAGE value="Started #8 test" />
     <MESSAGE value="Implemented #8 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented #8 test" />
+    <MESSAGE value="Implemented #9 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented #9 test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -283,11 +283,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/stepDefs/CheckProductsStepDefinitions.java</url>
           <line>51</line>
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

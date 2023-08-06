@@ -1,10 +1,16 @@
 package org.selenide.utils;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
 import java.util.List;
 
 public class Utils {
 
     public static Float convertPrice(String price) {
+        if (price.isEmpty())
+            return 0f;
+
         String filtered = price.replaceAll("\\$", "")
                 .replaceAll("€", "")
                 .replaceAll("£", "");
@@ -12,6 +18,9 @@ public class Utils {
     }
 
     public static Float convertDiscount(String discount) {
+        if (discount.isEmpty())
+            return 0f;
+
         String filtered = discount.replaceAll("-", "")
                 .replaceAll("%", "");
         return Float.parseFloat(filtered);
@@ -29,6 +38,25 @@ public class Utils {
             }
         }
         return isSortEquals;
+    }
+
+    public static WebElement findChild(WebElement root, String path) {
+        WebElement element = null;
+        try {
+            element = root.findElement(By.xpath(path));
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+        return element;
+    }
+
+    public static String findChildText(WebElement root, String path) {
+        String text = "";
+        WebElement child = findChild(root, path);
+        if (child != null) {
+            text = child.getText();
+        }
+        return text;
     }
 
 }

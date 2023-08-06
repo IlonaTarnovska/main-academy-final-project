@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented #9 test" />
+    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented workspace">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/CollectionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,16 +33,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ilona_Tarnovska/IdeaProjects/main-academy-final-project/src/test/resources&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Ilona_Tarnovska/IdeaProjects/main-academy-final-project/src/main/java/org/selenide/utils",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ilona_Tarnovska\IdeaProjects\main-academy-final-project\src\main\java\org\selenide\utils" />
+      <recent name="C:\Users\Ilona_Tarnovska\IdeaProjects\main-academy-final-project\src\main\java\org\selenide\models" />
       <recent name="C:\Users\Ilona_Tarnovska\IdeaProjects\main-academy-final-project\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -43,7 +52,7 @@
       <recent name="org.selenide" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: AddingToCartCheck">
+  <component name="RunManager" selected="Cucumber Java.Feature: SortingCheck">
     <configuration name="Feature: AddingToCartCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" />
@@ -144,9 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Feature: SortingCheck" />
         <item itemvalue="Cucumber Java.Feature: AddingToCartCheck" />
         <item itemvalue="Cucumber Java.Scenario: Check sorting products" />
-        <item itemvalue="Cucumber Java.Feature: SortingCheck" />
         <item itemvalue="Cucumber Java.Scenario: Check price drop" />
         <item itemvalue="Cucumber Java.Scenario: Checking products" />
       </list>
@@ -238,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691341110167</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Implemented workspace">
+      <created>1691341270201</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1691341270201</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +280,8 @@
     <MESSAGE value="Started #8 test" />
     <MESSAGE value="Implemented #8 test" />
     <MESSAGE value="Implemented #9 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented #9 test" />
+    <MESSAGE value="Implemented workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented workspace" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -283,6 +300,21 @@
           <url>file://$PROJECT_DIR$/src/test/java/stepDefs/CheckProductsStepDefinitions.java</url>
           <line>51</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

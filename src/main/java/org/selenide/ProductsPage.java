@@ -5,13 +5,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.selenide.models.ProductWebElementWrapper;
+import org.selenide.models.ProductModel;
+import org.selenide.utils.CollectionUtils;
 
-import java.text.Collator;
 import java.time.Duration;
-import java.util.*;
-
-import static org.selenide.utils.Utils.areSortEquals;
+import java.util.List;
 
 public class ProductsPage extends BasePage {
 
@@ -42,35 +40,38 @@ public class ProductsPage extends BasePage {
         PageFactory.initElements(getDriver(), this);
     }
 
-    public List<ProductWebElementWrapper> getProducts() {
-        List<ProductWebElementWrapper> list = new ArrayList<>();
-        for (WebElement item : products) {
-            list.add(new ProductWebElementWrapper(item));
-        }
-
-        return list;
+    public List<ProductModel> getProducts() {
+        return ProductModel.create(products);
     }
 
-    public void clickSortingButton() {
+    private void sortProducts(WebElement element) {
         makeClick(sortingButton);
-    }
-
-    public void clickAscendingDropdown() {
-        makeClick(sortingAscending);
+        makeClick(element);
         waitLoader();
     }
 
-    public boolean checkSortProductByNameAscending() {
-        List<ProductWebElementWrapper> original = getProducts();
-        List<ProductWebElementWrapper> sorted = new ArrayList<>(original);
-        Collator collator = Collator.getInstance(Locale.US);
-        Collections.sort(sorted, new Comparator<ProductWebElementWrapper>() {
-            @Override
-            public int compare(final ProductWebElementWrapper object1, final ProductWebElementWrapper object2) {
-                return collator.compare(object1.getName(), object2.getName());
-            }
-        });
-        return areSortEquals(original, sorted);
+    public void clickNameAscDropdown() {
+        sortProducts(sortingAscending);
+    }
+
+    public void clickNameDescDropdown() {
+        sortProducts(sortingDescending);
+    }
+
+    public void clickPriceAscDropdown() {
+        sortProducts(sortingPriceAscending);
+    }
+
+    public void clickPriceDescDropdown() {
+        sortProducts(sortingPriceDescending);
+    }
+
+    public List<String> productNames() {
+        return CollectionUtils.convert(getProducts(), ProductModel::getName);
+    }
+
+    public List<Float> productPrices() {
+        return CollectionUtils.convert(getProducts(), ProductModel::getNewPrice);
     }
 
     private void waitLoader() {
@@ -78,56 +79,5 @@ public class ProductsPage extends BasePage {
         wait.until(ExpectedConditions.invisibilityOf(loader));
     }
 
-    public void clickDescendingDropdown() {
-        makeClick(sortingDescending);
-        waitLoader();
-    }
-
-    public boolean checkSortProductByNameDescending() {
-        List<ProductWebElementWrapper> original = getProducts();
-        List<ProductWebElementWrapper> sorted = new ArrayList<>(original);
-        Collator collator = Collator.getInstance(Locale.US);
-        Collections.sort(sorted, new Comparator<ProductWebElementWrapper>() {
-            @Override
-            public int compare(final ProductWebElementWrapper object1, final ProductWebElementWrapper object2) {
-                return collator.compare(object2.getName(), object1.getName());
-            }
-        });
-        return areSortEquals(original, sorted);
-    }
-
-    public void clickAscendingPriceDropdown() {
-        makeClick(sortingPriceAscending);
-        waitLoader();
-    }
-
-    public boolean checkSortProductByPriceAscending() {
-        List<ProductWebElementWrapper> original = getProducts();
-        List<ProductWebElementWrapper> sorted = new ArrayList<>(original);
-        Collections.sort(sorted, new Comparator<ProductWebElementWrapper>() {
-            @Override
-            public int compare(final ProductWebElementWrapper object1, final ProductWebElementWrapper object2) {
-                return Float.compare(object1.getNewPrice(), object2.getNewPrice());
-            }
-        });
-        return areSortEquals(original, sorted);
-    }
-
-    public void clickDescendingPriceDropdown() {
-        makeClick(sortingPriceDescending);
-        waitLoader();
-    }
-
-    public boolean checkSortProductByPriceDescending() {
-        List<ProductWebElementWrapper> original = getProducts();
-        List<ProductWebElementWrapper> sorted = new ArrayList<>(original);
-        Collections.sort(sorted, new Comparator<ProductWebElementWrapper>() {
-            @Override
-            public int compare(final ProductWebElementWrapper object1, final ProductWebElementWrapper object2) {
-                return Float.compare(object2.getNewPrice(), object1.getNewPrice());
-            }
-        });
-        return areSortEquals(original, sorted);
-    }
 }
 

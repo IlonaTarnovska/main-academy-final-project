@@ -6,6 +6,10 @@ import org.assertj.core.api.Assertions;
 import org.assertj.core.api.SoftAssertions;
 import org.selenide.HomePage;
 import org.selenide.ProductsPage;
+import org.selenide.utils.CollectionUtils;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class SortingCheckStepDefinitions {
 
@@ -33,49 +37,52 @@ public class SortingCheckStepDefinitions {
 
     @Then("I sort products as 'Name, A to Z'")
     public void sortingProductByNameAscending() {
-        productsPage.clickSortingButton();
-        productsPage.clickAscendingDropdown();
+        productsPage.clickNameAscDropdown();
     }
 
     @Then("I check that sorting by name ascending is correct")
     public void checkingByNameAscending() {
-        boolean isCorrect = productsPage.checkSortProductByNameAscending();
-        softAssertions.assertThat(isCorrect).isEqualTo(true);
+        List<String> productNames = productsPage.productNames();
+        List<String> sorted = CollectionUtils.sortAscString(productNames);
+
+        softAssertions.assertThatList(productNames).isEqualTo(sorted);
     }
 
     @Then("I sort products as 'Name, Z to A'")
     public void sortingProductByNameDescending() {
-        productsPage.clickSortingButton();
-        productsPage.clickDescendingDropdown();
+        productsPage.clickNameDescDropdown();
     }
 
     @Then("I check that sorting by name descending is correct")
     public void checkingByNameDescending() {
-        boolean isCorrect = productsPage.checkSortProductByNameDescending();
-        softAssertions.assertThat(isCorrect).isEqualTo(true);
+        List<String> productNames = productsPage.productNames();
+        List<String> sorted = CollectionUtils.sortDescString(productNames);
+
+        softAssertions.assertThatList(productNames).isEqualTo(sorted);
     }
 
     @Then("I sort products as 'Price, low to high'")
     public void sortingByPriceAscending() {
-        boolean isCorrect = productsPage.checkSortProductByPriceAscending();
-        softAssertions.assertThat(isCorrect).isEqualTo(true);
+        productsPage.clickPriceAscDropdown();
     }
 
     @Then("I check that sorting by Price ascending is correct")
     public void checkingByPriceAscending() {
-        boolean isCorrect = productsPage.checkSortProductByPriceAscending();
-        softAssertions.assertThat(isCorrect).isEqualTo(true);
+        List<Float> productPrices = productsPage.productPrices();
+        List<Float> sorted = CollectionUtils.sortAscFloat(productPrices);
 
+        softAssertions.assertThatList(productPrices).isEqualTo(sorted);
     }
     @Then("I sort products as 'Price, high to low'")
     public void sortingByPriceDescending() {
-        boolean isCorrect = productsPage.checkSortProductByPriceDescending();
-        softAssertions.assertThat(isCorrect).isEqualTo(true);
+        productsPage.clickPriceDescDropdown();
     }
 
     @Then("I check that sorting by Price Descending is correct")
     public void checkingByPriceDescending() {
-        boolean isCorrect = productsPage.checkSortProductByPriceDescending();
-        softAssertions.assertThat(isCorrect).isEqualTo(true);
+        List<Float> productPrices = productsPage.productPrices();
+        List<Float> sorted = CollectionUtils.sortDescFloat(productPrices);
+
+        softAssertions.assertThatList(productPrices).isEqualTo(sorted);
     }
 }

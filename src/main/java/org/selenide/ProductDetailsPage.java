@@ -1,5 +1,6 @@
 package org.selenide;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -40,6 +41,21 @@ public class ProductDetailsPage extends BasePage {
     @FindBy(xpath = "//span[@class='subtotal value']")
     public WebElement modalSubtotalWebElement;
 
+    @FindBy(xpath = "//textarea[@placeholder='Your message here']")
+    public static WebElement productCustomizationField;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary float-xs-right']")
+    public static WebElement saveCustomizationButton;
+
+    @FindBy(xpath = "//button[@class='btn btn-secondary']")
+    public static WebElement modalContinueShoppingButton;
+
+    @FindBy(xpath = "//input[@title='Black']")
+    public static WebElement colorSelectorBlack;
+
+    @FindBy(xpath = "//a[@class='btn btn-primary']")
+    public static WebElement modalProceedToCheckoutButton;
+
     private final WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
 
     public void paperTypeDropdownClick(String text) {
@@ -63,11 +79,11 @@ public class ProductDetailsPage extends BasePage {
         return modelWindowTitle.getText();
     }
 
-    public String modalWindowPaperType(){
+    public String modalWindowPaperType() {
         return paperTypeWebElement.getText();
     }
 
-    public String modalWindowQuantity(){
+    public String modalWindowQuantity() {
         return quantityTypeWebElement.getText();
     }
 
@@ -81,6 +97,28 @@ public class ProductDetailsPage extends BasePage {
         Integer quantity = Integer.parseInt(modalWindowQuantity());
         return subtotal * quantity;
     }
-}
 
+    public void fillCustomizeField(String text) {
+        productCustomizationField.sendKeys(Keys.TAB);
+        productCustomizationField.clear();
+        productCustomizationField.sendKeys(text);
+    }
+
+    public void clickOnSaveCustomizationButton() {
+        makeClick(saveCustomizationButton);
+    }
+
+    public void clickOnContinueShoppingButton(){
+        makeClick(modalContinueShoppingButton);
+    }
+
+    public void clickOnColorSelectorBlack(){
+        makeClick(colorSelectorBlack);
+    }
+
+    public void  clickOnModalProceedToCheckoutButton(){
+        makeClick(modalProceedToCheckoutButton);
+    }
+
+}
 

@@ -26,6 +26,12 @@ public class Utils {
         return Float.parseFloat(filtered);
     }
 
+    public static Integer convertToInt(String integer) {
+        if (integer.isEmpty())
+            return 0;
+        return Integer.parseInt(integer);
+    }
+
     public static  <T> boolean areSortEquals(List<T> list1, List<T> list2) {
         if (list1.size() != list2.size()) {
             return false;

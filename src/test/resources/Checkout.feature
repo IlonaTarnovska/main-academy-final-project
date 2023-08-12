@@ -13,19 +13,14 @@ Feature: Checkout end-to-end
     Then On the 'SEARCH RESULTS' page I click on 'Hummingbird Printed T-Shirt'
     And I select 'Black' color
     And I click 'ADD TO CART' button
-    And I click 'PROCEED TO CHECKOUT'
+    And I click modal 'PROCEED TO CHECKOUT'
     And On the 'SHOPPING CART' page I check that 'Total' calculated correct
     And I click 'PROCEED TO CHECKOUT'
-    And I fill the 'PERSONAL INFORMATION' form with valid data (without password)
-    And I check all necessary checkboxes
-    And I click 'CONTINUE'
-    And I fill the 'ADDRESSES' form with valid data
-    And I click 'CONTINUE'
-    And I select 'My carrier' in the 'SHIPPING METHOD' section
-    And I click 'CONTINUE'
+    And I fill the 'PERSONAL INFORMATION' form with valid data and check all necessary checkboxes and click 'CONTINUE'
+    And I fill the 'ADDRESSES' form with valid data and click 'CONTINUE'
+    And I select 'My carrier' in the 'SHIPPING METHOD' section and click 'CONTINUE'
     And I select 'Pay by Check' in the 'PAYMENT' section
-    And the amount should equal Subtotal + Shipping
-    And I click on 'I agree...' checkbox
-    And I click on 'Order with an obligation to pay'
+    And The amount should equal Subtotal + Shipping
+    And I confirm order
     Then I should see 'YOUR ORDER IS CONFIRMED' on the next page
-    And the 'TOTAL' should be calculated correctly
+    And The 'TOTAL' should be calculated correctly

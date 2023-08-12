@@ -20,6 +20,9 @@ public class ShoppingCartPage extends BasePage {
     @FindBy(xpath = "//div[@class='cart-summary-line']/span[@class='value']")
     public static WebElement totalPrice;
 
+    @FindBy(xpath = "//div[@class='text-sm-center']/a[@class='btn btn-primary']")
+    public static WebElement proceedToCheckoutButton;
+
     public List<ProductCartModel> getProducts() {
         return ProductCartModel.create(products);
     }
@@ -35,6 +38,10 @@ public class ShoppingCartPage extends BasePage {
 
     public Float getTotalPrice(){
         return Utils.convertPrice(totalPrice.getText());
+    }
+
+    public void clickProceedToCheckoutButton() {
+        makeClick(proceedToCheckoutButton);
     }
 }
 

@@ -77,6 +77,8 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//input[@class='ui-autocomplete-input']")
     public WebElement searchField;
 
+    private final WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
+
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
         //wait for page loading
@@ -196,6 +198,8 @@ public class HomePage extends BasePage {
     }
 
     public void fillSearchField(String text) {
+        wait.until(ExpectedConditions.elementToBeClickable(searchField));
+        searchField.sendKeys(Keys.CLEAR);
         searchField.sendKeys("value", text);
     }
 

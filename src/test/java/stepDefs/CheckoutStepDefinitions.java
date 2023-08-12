@@ -1,12 +1,10 @@
 package stepDefs;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.SoftAssertions;
-import org.selenide.HomePage;
-import org.selenide.ProductDetailsPage;
-import org.selenide.SearchResultsPage;
-import org.selenide.ShoppingCartPage;
+import org.selenide.*;
 
 public class CheckoutStepDefinitions {
 
@@ -45,6 +43,8 @@ public class CheckoutStepDefinitions {
     SearchResultsPage searchResultsPage = new SearchResultsPage();
     ProductDetailsPage productDetailsPage = new ProductDetailsPage();
     ShoppingCartPage shoppingCartPage = new ShoppingCartPage();
+    OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage();
+    OrderConfirmedPage orderConfirmedPage = new OrderConfirmedPage();
 
     SoftAssertions softAssertions = new SoftAssertions();
 
@@ -61,40 +61,94 @@ public class CheckoutStepDefinitions {
     }
 
     @Then("I click 'SAVE CUSTOMIZATION'")
-    public void clickOnSaveCustomization (){
+    public void clickOnSaveCustomization() {
         productDetailsPage.clickOnSaveCustomizationButton();
     }
 
     @Then("I change 'Quantity' to {string} if not '1' already")
-    public void setQuantity(String quantity){
+    public void setQuantity(String quantity) {
         productDetailsPage.setQuantity(quantity);
     }
 
     @Then("I click 'ADD TO CART' button")
-    public void clickAddToCartButton(){
+    public void clickAddToCartButton() {
         productDetailsPage.clickAddToCartButton();
     }
 
     @Then("I click 'CONTINUE SHOPPING'")
-    public void clickOnContinueShoppingButton(){
+    public void clickOnContinueShoppingButton() {
         productDetailsPage.clickOnContinueShoppingButton();
     }
 
     @Then("I select 'Black' color")
-    public void selectColor(){
+    public void selectColor() {
         productDetailsPage.clickOnColorSelectorBlack();
     }
 
-    @Then("I click 'PROCEED TO CHECKOUT'")
-    public void clickProceedToCheckoutButton(){
+    @Then("I click modal 'PROCEED TO CHECKOUT'")
+    public void clickModalProceedToCheckoutButton() {
         productDetailsPage.clickOnModalProceedToCheckoutButton();
     }
 
+    @Then("I click 'PROCEED TO CHECKOUT'")
+    public void clickProceedToCheckoutButton() {
+        shoppingCartPage.clickProceedToCheckoutButton();
+    }
+
     @Then("On the 'SHOPPING CART' page I check that 'Total' calculated correct")
-    public void checkTotalIsCorrect(){
+    public void checkTotalIsCorrect() {
         Float actual = shoppingCartPage.getTotalPrice();
         Float expected = shoppingCartPage.getCalculatedTotalPrice();
 
         softAssertions.assertThat(actual).isEqualTo(expected);
     }
+
+    @And("I fill the 'PERSONAL INFORMATION' form with valid data and check all necessary checkboxes and click 'CONTINUE'")
+    public void fillPersonalInfo() {
+        orderConfirmationPage.fillPersonalData("Ilona", "Tarnovska", "tarnovska123@gmail.com");
+    }
+
+    @Then("I fill the 'ADDRESSES' form with valid data and click 'CONTINUE'")
+    public void fillAddressesField() {
+        orderConfirmationPage.fillAddressInfo("Kalatushkina st.29", "21000", "Prostokvashyno");
+    }
+
+    @Then("I select 'My carrier' in the 'SHIPPING METHOD' section and click 'CONTINUE'")
+    public void selectMyCarrier() {
+        orderConfirmationPage.chooseShippingMethod();
+    }
+
+    @Then("I select 'Pay by Check' in the 'PAYMENT' section")
+    public void selectPaymentMethod() {
+        orderConfirmationPage.choosePaymentMethod();
+    }
+
+    @Then("The amount should equal Subtotal + Shipping")
+    public void checkAmount() {
+        Float actual = orderConfirmationPage.getTotal();
+        Float expected = orderConfirmationPage.getShipping() + orderConfirmationPage.getSubtotal();
+
+        softAssertions.assertThat(actual).isEqualTo(expected);
+    }
+
+    @Then("I confirm order")
+    public void confirmOrder() {
+        orderConfirmationPage.confirmOrder();
+    }
+
+    @Then("I should see {string} on the next page")
+    public void checkConfirmedTitle(String expected) {
+        String actual = orderConfirmedPage.getConfirmedTitle();
+
+        softAssertions.assertThat(actual).isEqualTo(expected);
+    }
+
+    @Then("The 'TOTAL' should be calculated correctly")
+    public void checkConfirmedTitle() {
+        Float actual = orderConfirmedPage.getTotal();
+        Float expected = orderConfirmedPage.getSubtotal() + orderConfirmationPage.getShipping();
+
+        softAssertions.assertThat(actual).isEqualTo(expected);
+    }
+
 }

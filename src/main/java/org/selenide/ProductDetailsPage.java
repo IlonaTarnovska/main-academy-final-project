@@ -53,7 +53,7 @@ public class ProductDetailsPage extends BasePage {
     @FindBy(xpath = "//input[@title='Black']")
     public static WebElement colorSelectorBlack;
 
-    @FindBy(xpath = "//a[@class='btn btn-primary']")
+    @FindBy(xpath = "//div[@class='cart-content-btn']/a[@class='btn btn-primary']")
     public static WebElement modalProceedToCheckoutButton;
 
     private final WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
@@ -117,6 +117,7 @@ public class ProductDetailsPage extends BasePage {
     }
 
     public void  clickOnModalProceedToCheckoutButton(){
+        wait.until(ExpectedConditions.visibilityOf(modalProceedToCheckoutButton));
         makeClick(modalProceedToCheckoutButton);
     }
 

@@ -4,42 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented test #10">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/WaitHelper.java" afterDir="false" />
+    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Optimized all tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmationPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/PricesDropPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/PricesDropPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/SearchResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/utils/CollectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/CollectionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/CheckCategoriesStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/CheckCategoriesStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/CheckProductsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/CheckProductsStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/CheckoutStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/CheckoutStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/LanguagesStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/LanguagesStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/PriceDropStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/PriceDropStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationInvalidDataStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationInvalidDataStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/SubscriptionStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SubscriptionStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CategoriesCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CategoriesCheck.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CheckProducts.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CheckProducts.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/Checkout.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Checkout.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/LanguagesCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/LanguagesCheck.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/PriceDropCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/PriceDropCheck.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/RegistrationCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/RegistrationCheck.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/RegistrationInvalidDataCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/RegistrationInvalidDataCheck.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691929490240</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Optimized all tests">
+      <created>1691950310259</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1691950310259</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,7 +322,8 @@
     <MESSAGE value="Started #10 test" />
     <MESSAGE value="Implemented test #10" />
     <MESSAGE value="Implemented optimizations for tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented optimizations for tests" />
+    <MESSAGE value="Optimized all tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimized all tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

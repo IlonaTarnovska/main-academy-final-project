@@ -3,6 +3,7 @@ package org.selenide;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.selenide.utils.Utils;
 import org.selenide.utils.WaitHelper;
 
@@ -69,6 +70,12 @@ public class OrderConfirmationPage extends BasePage{
     @FindBy(xpath = "//*[@id='payment-confirmation']/div[1]/button")
     public static WebElement placeOrderButton;
 
+    @FindBy(xpath = "//select[@id='field-id_country']")
+    public static WebElement countryDropdown;
+
+    @FindBy(xpath = "//select[@id='field-id_state']")
+    public static WebElement stateDropdown;
+
     public void fillPersonalData(String firstName, String lastName, String email) {
         setAttribute(genderMr, "value", "1");
         setAttribute(fNameElement, "value", firstName);
@@ -82,9 +89,17 @@ public class OrderConfirmationPage extends BasePage{
     }
 
     public void fillAddressInfo(String address, String zipCode, String city){
-        setAttribute(addressElement,"value",address);
-        setAttribute(zipCodeElement,"value",zipCode);
-        setAttribute(cityElement,"value",city);
+        if (stateDropdown.isDisplayed()) {
+            Select state = new Select(stateDropdown);
+            state.selectByVisibleText("AA");
+
+            Select country = new Select(countryDropdown);
+            country.selectByVisibleText("France");
+        }
+
+        setAttribute(addressElement, "value", address);
+        setAttribute(zipCodeElement, "value", zipCode);
+        setAttribute(cityElement, "value", city);
 
         WaitHelper.clickable(continueButtonAddressForm);
         makeClick(continueButtonAddressForm);

@@ -27,7 +27,8 @@ public class ProductCartModel {
     }
 
     public Integer getQuantity(){
-        String quantity = Utils.findChildText(root, ".//input[@class='js-cart-line-product-quantity form-control']");
+        String quantity = Utils.findChild(root, ".//input[@class='js-cart-line-product-quantity form-control']")
+                .getAttribute("value");
         return Utils.convertToInt(quantity);
     }
 }

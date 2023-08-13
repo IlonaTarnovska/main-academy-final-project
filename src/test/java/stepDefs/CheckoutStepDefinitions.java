@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.assertj.core.api.SoftAssertions;
 import org.selenide.*;
+import org.selenide.utils.Utils;
 
 public class CheckoutStepDefinitions {
 
@@ -100,7 +101,8 @@ public class CheckoutStepDefinitions {
         Float actual = shoppingCartPage.getTotalPrice();
         Float expected = shoppingCartPage.getCalculatedTotalPrice();
 
-        softAssertions.assertThat(actual).isEqualTo(expected);
+        softAssertions.assertThat(Utils.round(actual))
+                .isEqualTo(Utils.round(expected));
     }
 
     @And("I fill the 'PERSONAL INFORMATION' form with valid data and check all necessary checkboxes and click 'CONTINUE'")
@@ -128,7 +130,8 @@ public class CheckoutStepDefinitions {
         Float actual = orderConfirmationPage.getTotal();
         Float expected = orderConfirmationPage.getShipping() + orderConfirmationPage.getSubtotal();
 
-        softAssertions.assertThat(actual).isEqualTo(expected);
+        softAssertions.assertThat(Utils.round(actual))
+                .isEqualTo(Utils.round(expected));
     }
 
     @Then("I confirm order")
@@ -146,9 +149,15 @@ public class CheckoutStepDefinitions {
     @Then("The 'TOTAL' should be calculated correctly")
     public void checkConfirmedTitle() {
         Float actual = orderConfirmedPage.getTotal();
-        Float expected = orderConfirmedPage.getSubtotal() + orderConfirmationPage.getShipping();
+        Float subtotal = orderConfirmedPage.getSubtotal();
+        Float shipping = orderConfirmedPage.getShipping();
 
-        softAssertions.assertThat(actual).isEqualTo(expected);
+        Float expected = subtotal + shipping;
+
+        softAssertions.assertThat(Utils.round(actual))
+                .isEqualTo(Utils.round(expected));
+
+        softAssertions.assertAll();
     }
 
 }

@@ -36,7 +36,7 @@ public class OrderConfirmationPage extends BasePage{
     @FindBy(xpath = "//*[@id='customer-form']/footer/button")
     public static WebElement continueButtonCustomerForm;
 
-    @FindBy(xpath = "//*[@id='checkout-addresses-step']/div/div/form/div[2]/button")
+    @FindBy(xpath = "//*[@id='delivery-address']/div/footer/button")
     public static WebElement continueButtonAddressForm;
 
     @FindBy(xpath = "//*[@id='js-delivery']/button")
@@ -69,8 +69,10 @@ public class OrderConfirmationPage extends BasePage{
     @FindBy(xpath = "//input[@id='conditions_to_approve[terms-and-conditions]']")
     public static WebElement agreeTermsConditions;
 
-    @FindBy(xpath = "//button[@id='btn btn-primary center-block']")
+    @FindBy(xpath = "//*[@id='payment-confirmation']/div[1]/button")
     public static WebElement placeOrderButton;
+
+    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
 
     public void fillPersonalData(
             String firstName,
@@ -97,6 +99,7 @@ public class OrderConfirmationPage extends BasePage{
         setAttribute(zipCodeElement,"value",zipCode);
         setAttribute(cityElement,"value",city);
 
+        wait.until(ExpectedConditions.elementToBeClickable(continueButtonAddressForm));
         makeClick(continueButtonAddressForm);
     }
 

@@ -198,9 +198,8 @@ public class HomePage extends BasePage {
     }
 
     public void fillSearchField(String text) {
-        wait.until(ExpectedConditions.elementToBeClickable(searchField));
         searchField.sendKeys(Keys.CLEAR);
-        searchField.sendKeys("value", text);
+        searchField.sendKeys(text);
     }
 
     public void enterSearchField() {

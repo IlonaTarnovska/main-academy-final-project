@@ -14,21 +14,22 @@ public class OrderConfirmedPage extends BasePage {
     @FindBy(xpath = "//h3[@class='h1 card-title']")
     public static WebElement orderConfirmedTitle;
 
-    @FindBy(xpath = "//tr[@class='total-value font-weight-bold']")
-    public static WebElement orderTotal;
-
-    @FindBy(xpath = "//tbody/tr[1]/td[2]")
+    @FindBy(xpath = "//*[@id='order-items']/div[2]/table/tbody/tr[1]/td[2]")
     public static WebElement orderSubtotal;
 
-    @FindBy(xpath = "//tbody/tr[2]/td[2]")
+    @FindBy(xpath = "//*[@id='order-items']/div[2]/table/tbody/tr[2]/td[2]")
     public static WebElement orderShipping;
+
+    @FindBy(xpath = "//*[@id='order-items']/div[2]/table/tbody/tr[3]/td[2]")
+    public static WebElement orderTotal;
 
     public String getConfirmedTitle() {
         return orderConfirmedTitle.getText();
     }
 
     public Float getTotal() {
-        return Utils.convertPrice(orderTotal.getText());
+        String tax = orderTotal.getText().replace("TOTAL (TAX INCL.) ", "");
+        return Utils.convertPrice(tax);
     }
 
     public Float getSubtotal() {

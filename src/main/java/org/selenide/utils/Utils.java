@@ -3,9 +3,16 @@ package org.selenide.utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class Utils {
+
+    private static final DecimalFormat df = new DecimalFormat("0.00");
+
+    public static String round(Float value) {
+        return df.format(value);
+    }
 
     public static Float convertPrice(String price) {
         if (price.isEmpty())

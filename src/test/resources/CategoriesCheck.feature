@@ -9,3 +9,5 @@ Feature: Check categories
     Then I check that 'STATIONERY' and 'HOME ACCESSORIES' sub menu items appears
     Then I hover mouse over 'ART'
     And I check that no any sub category appears
+    And I check all assertions
+

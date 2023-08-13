@@ -11,3 +11,4 @@ Feature: Adding to cart check
     Then I check that new window with title 'Product successfully added to your shopping cart' appears
     Then I check that correct 'Paper Type' 'Doted' and 'Quantity' '5' is shown on the left side of the window
     And I check that 'Total' calculated correct
+    And I check all assertions

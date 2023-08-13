@@ -1,10 +1,10 @@
 package stepDefs;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.Assertions;
 import org.selenide.HomePage;
+
+import static stepDefs.HomePageStepDefinitions.softAssertions;
 
 public class SubscriptionStepDefinitions {
 
@@ -21,7 +21,7 @@ public class SubscriptionStepDefinitions {
     public void iCheckSubscriptionLabel(String expectedLabel) {
         String label = homePage.getNewsLetterLabelText();
 
-        Assertions.assertThat(label)
+        softAssertions.assertThat(label)
                 .as("Expected label " + expectedLabel)
                 .isEqualTo(expectedLabel);
     }
@@ -30,14 +30,14 @@ public class SubscriptionStepDefinitions {
     public void iCheckSubscriptionMessage(String expectedMessage) {
         String message = homePage.getUnsubscribeMessage();
 
-        Assertions.assertThat(message)
+        softAssertions.assertThat(message)
                 .as("Expected message " + expectedMessage)
                 .isEqualTo(expectedMessage);
     }
 
     @Then("I check that all characters on SUBSCRIBE button in upper case")
     public void iCheckThatAllCharactersOnButtonInUpperCase() {
-        Assertions.assertThat(homePage.checkUpperCase())
+        softAssertions.assertThat(homePage.checkUpperCase())
                 .isEqualTo(true);
     }
 }

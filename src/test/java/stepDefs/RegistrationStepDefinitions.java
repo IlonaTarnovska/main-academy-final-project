@@ -3,10 +3,11 @@ package stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.Assertions;
 import org.selenide.HomePage;
 import org.selenide.LoginPage;
 import org.selenide.RegisterPage;
+
+import static stepDefs.HomePageStepDefinitions.softAssertions;
 
 public class RegistrationStepDefinitions {
 
@@ -52,6 +53,7 @@ public class RegistrationStepDefinitions {
     public void verifyNameAppearsNearCartButton() {
         String expectedName = "John Doe";
         String actualName = homePage.getLoggedInUserName();
-        Assertions.assertThat(actualName).isEqualTo(expectedName);
+
+        softAssertions.assertThat(actualName).isEqualTo(expectedName);
     }
 }

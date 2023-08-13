@@ -8,3 +8,5 @@ Feature: Registration invalid data check
     And I click on 'Save' button
     And I check that 'First name' highlighted in red
     And I check that pop-up with text 'Invalid format.' appear under field
+    And I check all assertions
+

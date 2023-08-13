@@ -12,3 +12,4 @@ Feature: Sorting products
     Then I check that sorting by Price ascending is correct
     Then I sort products as 'Price, high to low'
     Then I check that sorting by Price Descending is correct
+    And I check all assertions

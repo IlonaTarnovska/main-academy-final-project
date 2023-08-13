@@ -3,12 +3,10 @@ package org.selenide;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.selenide.models.ProductModel;
 import org.selenide.utils.CollectionUtils;
+import org.selenide.utils.WaitHelper;
 
-import java.time.Duration;
 import java.util.List;
 
 public class ProductsPage extends BasePage {
@@ -33,8 +31,6 @@ public class ProductsPage extends BasePage {
 
     @FindBy(xpath = "//div[@class='dropdown-menu']/a[contains(., 'Price, high to low')]")
     public static WebElement sortingPriceDescending;
-
-    private final WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
 
     public ProductsPage() {
         PageFactory.initElements(getDriver(), this);
@@ -75,8 +71,8 @@ public class ProductsPage extends BasePage {
     }
 
     private void waitLoader() {
-        wait.until(ExpectedConditions.visibilityOf(loader));
-        wait.until(ExpectedConditions.invisibilityOf(loader));
+        WaitHelper.visibility(loader);
+        WaitHelper.invisibility(loader);
     }
 
 }

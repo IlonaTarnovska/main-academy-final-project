@@ -11,13 +11,6 @@ public class CollectionUtils {
         return input.stream().map(transform).collect(Collectors.toList());
     }
 
-    public static <T> LinkedList<T> getInstance(List<T> list)
-    {
-        LinkedList<T> linkedList = new LinkedList<>(list);
-
-        return linkedList;
-    }
-
     public static List<String> sortAscString(List<String> input) {
         List<String> sorted = new ArrayList<>(input);
         Collator collator = Collator.getInstance(Locale.US);

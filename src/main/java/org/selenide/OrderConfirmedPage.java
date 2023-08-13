@@ -24,7 +24,7 @@ public class OrderConfirmedPage extends BasePage {
     public static WebElement orderTotal;
 
     public String getConfirmedTitle() {
-        return orderConfirmedTitle.getText();
+        return Utils.removeDoneChar(orderConfirmedTitle.getText());
     }
 
     public Float getTotal() {

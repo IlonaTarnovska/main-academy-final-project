@@ -4,12 +4,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.selenide.utils.Utils;
-
-import java.time.Duration;
+import org.selenide.utils.WaitHelper;
 
 public class ProductDetailsPage extends BasePage {
 
@@ -56,7 +53,6 @@ public class ProductDetailsPage extends BasePage {
     @FindBy(xpath = "//div[@class='cart-content-btn']/a[@class='btn btn-primary']")
     public static WebElement modalProceedToCheckoutButton;
 
-    private final WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
 
     public void paperTypeDropdownClick(String text) {
         Select paperType = new Select(paperTypeDropdown);
@@ -65,18 +61,20 @@ public class ProductDetailsPage extends BasePage {
 
     public void setQuantity(String quantity) {
         //TODO: this line doesn't work
-        setAttribute(quantityInput, "value", quantity);
+        quantityInput.sendKeys("");
+        quantityInput.sendKeys(quantity);
+        //setAttribute(quantityInput, "value", quantity);
         //quantityInput.sendKeys("value", quantity);
     }
 
     public void clickAddToCartButton() {
-        wait.until(ExpectedConditions.elementToBeClickable(addToCartButton));
+        WaitHelper.clickable(addToCartButton);
         makeClick(addToCartButton);
     }
 
     public String getModalWindowTitle() {
-        wait.until(ExpectedConditions.visibilityOf(modelWindowTitle));
-        return modelWindowTitle.getText();
+        WaitHelper.visibility(modelWindowTitle);
+        return Utils.removeDoneChar(modelWindowTitle.getText());
     }
 
     public String modalWindowPaperType() {
@@ -117,7 +115,7 @@ public class ProductDetailsPage extends BasePage {
     }
 
     public void  clickOnModalProceedToCheckoutButton(){
-        wait.until(ExpectedConditions.visibilityOf(modalProceedToCheckoutButton));
+        WaitHelper.visibility(modalProceedToCheckoutButton);
         makeClick(modalProceedToCheckoutButton);
     }
 

@@ -3,10 +3,12 @@ package stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.SoftAssertions;
 import org.selenide.HomePage;
 import org.selenide.ProductDetailsPage;
 import org.selenide.SearchResultsPage;
+
+import static stepDefs.HomePageStepDefinitions.softAssertions;
+
 
 public class AddingToCartStepDefinitions {
 
@@ -25,8 +27,6 @@ public class AddingToCartStepDefinitions {
     HomePage homePage = new HomePage();
     ProductDetailsPage productDetailsPage = new ProductDetailsPage();
     SearchResultsPage searchResultsPage = new SearchResultsPage();
-
-    SoftAssertions softAssertions = new SoftAssertions();
 
     @When("In the search field I enter {string} and press 'Enter'")
     public void searchItem(String text) {

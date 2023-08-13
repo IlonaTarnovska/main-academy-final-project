@@ -5,13 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Implemented test #10">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/WaitHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmationPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductCartModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductCartModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/PricesDropPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/PricesDropPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/models/ProductWebElementWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/utils/CollectionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/CollectionUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/CheckCategoriesStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/CheckCategoriesStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/CheckProductsStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/CheckProductsStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/CheckoutStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/CheckoutStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/HomePageStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/LanguagesStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/LanguagesStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/PriceDropStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/PriceDropStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationInvalidDataStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationInvalidDataStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/RegistrationStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefs/SubscriptionStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/SubscriptionStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/CategoriesCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CategoriesCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/CheckProducts.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/CheckProducts.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Checkout.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/Checkout.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/LanguagesCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/LanguagesCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/PriceDropCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/PriceDropCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/RegistrationCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/RegistrationCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/RegistrationInvalidDataCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/RegistrationInvalidDataCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
@@ -53,15 +82,15 @@
       <recent name="org.selenide" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Feature: Checkout">
-    <configuration name="Feature: AddingToCartCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Checking  end-to-end">
+    <configuration name="Feature: LanguagesCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/LanguagesCheck.feature" />
       <option name="GLUE" value="stepDefs org.Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="final-project" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: AddingToCartCheck" />
+      <option name="SUGGESTED_NAME" value="Feature: LanguagesCheck" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -73,14 +102,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Feature: Checkout" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: RegistrationInvalidDataCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/Checkout.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/RegistrationInvalidDataCheck.feature" />
       <option name="GLUE" value="stepDefs org.Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="final-project" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: Checkout" />
+      <option name="SUGGESTED_NAME" value="Feature: RegistrationInvalidDataCheck" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -111,15 +140,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Check sorting products" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Feature: SubscriptionMessagesCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" />
       <option name="GLUE" value="stepDefs org.Hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="final-project" />
-      <option name="NAME_FILTER" value="^Check sorting products$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Check sorting products$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Check sorting products" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: SubscriptionMessagesCheck" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -151,13 +179,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Cucumber Java.Scenario: Checking  end-to-end" />
+      <item itemvalue="Cucumber Java.Feature: LanguagesCheck" />
+      <item itemvalue="Cucumber Java.Feature: RegistrationInvalidDataCheck" />
+      <item itemvalue="Cucumber Java.Feature: SubscriptionMessagesCheck" />
+      <item itemvalue="Cucumber Java.Feature: SortingCheck" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Feature: Checkout" />
         <item itemvalue="Cucumber Java.Scenario: Checking  end-to-end" />
+        <item itemvalue="Cucumber Java.Feature: LanguagesCheck" />
+        <item itemvalue="Cucumber Java.Feature: SubscriptionMessagesCheck" />
         <item itemvalue="Cucumber Java.Feature: SortingCheck" />
-        <item itemvalue="Cucumber Java.Feature: AddingToCartCheck" />
-        <item itemvalue="Cucumber Java.Scenario: Check sorting products" />
+        <item itemvalue="Cucumber Java.Feature: RegistrationInvalidDataCheck" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691855839594</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Implemented test #10">
+      <created>1691929490240</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1691929490240</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -305,25 +347,26 @@
     <MESSAGE value="Optimized #8 test" />
     <MESSAGE value="Started #10 test" />
     <MESSAGE value="Implemented test #10" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented test #10" />
+    <MESSAGE value="Implemented optimizations for tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented optimizations for tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/RegistrationInvalidDataStepDefinitions.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/CheckProductsStepDefinitions.java</url>
-          <line>51</line>
-          <option name="timeStamp" value="9" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/stepDefs/SortingCheckStepDefinitions.java</url>
-          <line>47</line>
-          <option name="timeStamp" value="19" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/selenide/models/LanguageModel.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

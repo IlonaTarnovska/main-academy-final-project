@@ -3,11 +3,8 @@ package org.selenide;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.selenide.utils.Utils;
-
-import java.time.Duration;
+import org.selenide.utils.WaitHelper;
 
 public class OrderConfirmationPage extends BasePage{
 
@@ -72,13 +69,7 @@ public class OrderConfirmationPage extends BasePage{
     @FindBy(xpath = "//*[@id='payment-confirmation']/div[1]/button")
     public static WebElement placeOrderButton;
 
-    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
-
-    public void fillPersonalData(
-            String firstName,
-            String lastName,
-            String email
-    ) {
+    public void fillPersonalData(String firstName, String lastName, String email) {
         setAttribute(genderMr, "value", "1");
         setAttribute(fNameElement, "value", firstName);
         setAttribute(lNameElement, "value", lastName);
@@ -86,25 +77,23 @@ public class OrderConfirmationPage extends BasePage{
         makeClick(iAgreeCustomerFormCheckbox);
         makeClick(privacyCustomerFormCheckBox);
 
+        WaitHelper.clickable(continueButtonCustomerForm);
         makeClick(continueButtonCustomerForm);
     }
 
-    public void fillAddressInfo(
-            String address,
-            String zipCode,
-            String city
-
-    ){
+    public void fillAddressInfo(String address, String zipCode, String city){
         setAttribute(addressElement,"value",address);
         setAttribute(zipCodeElement,"value",zipCode);
         setAttribute(cityElement,"value",city);
 
-        wait.until(ExpectedConditions.elementToBeClickable(continueButtonAddressForm));
+        WaitHelper.clickable(continueButtonAddressForm);
         makeClick(continueButtonAddressForm);
     }
 
     public void chooseShippingMethod(){
         makeClick(myCarrierElement);
+
+        WaitHelper.clickable(continueButtonDeliveryForm);
         makeClick(continueButtonDeliveryForm);
     }
 
@@ -125,7 +114,10 @@ public class OrderConfirmationPage extends BasePage{
     }
 
     public void confirmOrder() {
+        WaitHelper.clickable(agreeTermsConditions);
         makeClick(agreeTermsConditions);
+
+        WaitHelper.clickable(placeOrderButton);
         makeClick(placeOrderButton);
     }
 }

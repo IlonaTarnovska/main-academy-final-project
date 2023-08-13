@@ -2,14 +2,13 @@ package stepDefs;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.Assertions;
-import org.assertj.core.api.SoftAssertions;
 import org.selenide.HomePage;
 import org.selenide.ProductsPage;
 import org.selenide.utils.CollectionUtils;
 
-import java.util.LinkedList;
 import java.util.List;
+
+import static stepDefs.HomePageStepDefinitions.softAssertions;
 
 public class SortingCheckStepDefinitions {
 
@@ -28,7 +27,6 @@ public class SortingCheckStepDefinitions {
 
     HomePage homePage = new HomePage();
     ProductsPage productsPage = new ProductsPage();
-    SoftAssertions softAssertions = new SoftAssertions();
 
     @When("I click on the 'All products >' under the 'POPULAR PRODUCTS' section")
     public void clickOnAllProductsLink() {

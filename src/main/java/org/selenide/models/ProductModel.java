@@ -1,5 +1,6 @@
 package org.selenide.models;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.selenide.utils.CollectionUtils;
 import org.selenide.utils.Utils;
@@ -23,7 +24,7 @@ public class ProductModel {
     }
 
     public String getName() {
-        return Utils.findChildText(root, ".//h2[@class='h3 product-title']");
+        return Utils.findChildText(root, ".//*[@class='h3 product-title']");
     }
 
     public Float getNewPrice() {
@@ -51,5 +52,9 @@ public class ProductModel {
 
         String formattedNewPrice = String.format("%.02f", calculatedNewPrice);
         return formattedNewPrice.equals(String.format("%.02f", newPrice));
+    }
+
+    public WebElement getClickableArea() {
+        return root.findElement(By.xpath(".//h2[@class='h3 product-title']/a"));
     }
 }

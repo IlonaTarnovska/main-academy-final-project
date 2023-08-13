@@ -3,11 +3,12 @@ package stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.Assertions;
 import org.selenide.HomePage;
 
 import java.util.Arrays;
 import java.util.List;
+
+import static stepDefs.HomePageStepDefinitions.softAssertions;
 
 public class CheckCategoriesStepDefinitions {
 
@@ -33,7 +34,7 @@ public class CheckCategoriesStepDefinitions {
         List<String> actual = homePage.getClothesDropdownElement();
         List<String> expected = Arrays.asList("MEN", "WOMEN");
 
-        Assertions.assertThatList(actual)
+        softAssertions.assertThatList(actual)
                 .isEqualTo(expected);
     }
 
@@ -47,7 +48,7 @@ public class CheckCategoriesStepDefinitions {
         List<String> actual = homePage.getAccessoriesDropdownElement();
         List<String> expected = Arrays.asList("STATIONERY", "HOME ACCESSORIES");
 
-        Assertions.assertThatList(actual)
+        softAssertions.assertThatList(actual)
                 .isEqualTo(expected);
     }
 
@@ -60,7 +61,7 @@ public class CheckCategoriesStepDefinitions {
     public void checkArtItems() {
         int actualSize = homePage.getArtDropdownElement().size();
 
-        Assertions.assertThat(actualSize)
+        softAssertions.assertThat(actualSize)
                 .isEqualTo(0);
     }
 }

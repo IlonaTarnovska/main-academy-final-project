@@ -1,17 +1,13 @@
 package org.selenide;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.selenide.utils.Utils;
+import org.selenide.models.ProductModel;
+import org.selenide.utils.CollectionUtils;
+import org.selenide.utils.WaitHelper;
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class HomePage extends BasePage {
@@ -35,7 +31,13 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//input[@class='btn btn-primary float-xs-right hidden-xs-down']")
     public WebElement subscribeButton;
 
-    @FindBy(xpath = "//ul[@class='dropdown-menu hidden-sm-down']/*")
+    @FindBy(xpath = "//*[@id='_desktop_language_selector']/div/div/button")
+    public WebElement dropdownLanguagesButton;
+
+    @FindBy(xpath = "//*[@id='_desktop_language_selector']/div/div/ul")
+    public WebElement dropdownLanguagesContainer;
+
+    @FindBy(xpath = "//*[@id='_desktop_language_selector']/div/div/ul/*")
     public List<WebElement> dropdownLanguages;
 
     @FindBy(xpath = "//span[@class='hidden-sm-down']")
@@ -77,13 +79,10 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//input[@class='ui-autocomplete-input']")
     public WebElement searchField;
 
-    private final WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(5));
-
     public void openHomePage() {
         getDriver().get("https://demo.prestashop.com/");
         //wait for page loading
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
-        wait.until(ExpectedConditions.invisibilityOf(loadingMessage));
+        WaitHelper.invisibility(loadingMessage, 20);
         getDriver().switchTo().frame(iframeFrameOfDemoShop);
     }
 
@@ -96,23 +95,17 @@ public class HomePage extends BasePage {
     }
 
     public boolean checkUpperCase() {
-        String textTransform = subscribeButton.getCssValue("text-transform");;
+        String textTransform = subscribeButton.getCssValue("text-transform");
         return textTransform.equals("uppercase");
     }
 
     public int getLanguagesCount() {
+        makeClick(dropdownLanguagesButton);
         return dropdownLanguages.size();
     }
 
-    public boolean isLanguagePresent(String expectedLanguage) {
-        boolean isLangPresent = false;
-        for (int i = 0; i < dropdownLanguages.size(); i++) {
-            String language = dropdownLanguages.get(i).getText();
-            if (language.equals(expectedLanguage)) {
-                isLangPresent = true;
-            }
-        }
-        return isLangPresent;
+    public List<String> getLanguages() {
+        return CollectionUtils.convert(dropdownLanguages, WebElement::getText);
     }
 
     public void clickSignInButton() {
@@ -130,63 +123,29 @@ public class HomePage extends BasePage {
     public void hoverMouseOnAccessoriesButton() {
         hoverMouse(accessoriesButton);
     }
+
     public void hoverMouseOnArtButton() {
         hoverMouse(artButton);
     }
 
     public List<String> getClothesDropdownElement() {
-        ArrayList<String> texts = new ArrayList<String>();
-        for (int i = 0; i < clothesPopUp.size(); i++) {
-            String text = clothesPopUp.get(i).getText();
-            texts.add(text);
-        }
-        return texts;
+        return CollectionUtils.convert(clothesPopUp, WebElement::getText);
     }
 
     public List<String> getAccessoriesDropdownElement() {
-        ArrayList<String> texts = new ArrayList<String>();
-        for (int i = 0; i < accessoriesPopUp.size(); i++) {
-            String text = accessoriesPopUp.get(i).getText();
-            texts.add(text);
-        }
-        return texts;
+        return CollectionUtils.convert(accessoriesPopUp, WebElement::getText);
     }
 
     public List<String> getArtDropdownElement() {
-        ArrayList<String> texts = new ArrayList<>();
-        for (int i = 0; i < artPopUp.size(); i++) {
-            String text = artPopUp.get(i).getText();
-            texts.add(text);
-        }
-        return texts;
+        return CollectionUtils.convert(artPopUp, WebElement::getText);
     }
 
     public int getPopularProductsCount() {
         return popularProducts.size();
     }
 
-    public int getProductNamesCount() {
-        By priceXpath = By.xpath(".//div[@class='product-description']/h3[@class='h3 product-title']");
-        List<WebElement> names = popularProductsContainer.findElements(priceXpath);
-        return names.size();
-    }
-
-    public int getProductPriceCount() {
-        return getProductPrices().size();
-    }
-
-    public List<Float> getProductPrices() {
-        ArrayList<Float> prices = new ArrayList<>();
-        By priceXpath = By.xpath(".//div[@class='product-price-and-shipping']/span[@class='price']");
-        List<WebElement> webPrices = popularProductsContainer.findElements(priceXpath);
-        for (WebElement element: webPrices) {
-            try {
-                prices.add(Utils.convertPrice(element.getText()));
-            } catch (Exception e) {
-            }
-        }
-        System.out.println(Arrays.toString(prices.toArray()));
-        return prices;
+    public List<ProductModel> getProducts() {
+        return ProductModel.create(popularProducts);
     }
 
     public void pricesDropLinkClick() {

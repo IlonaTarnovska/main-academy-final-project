@@ -7,3 +7,4 @@ Feature: Registration valid data check
     And I fill the form with valid data
     And I click on 'Save' button
     Then I should see my name appear near the cart button
+    And I check all assertions

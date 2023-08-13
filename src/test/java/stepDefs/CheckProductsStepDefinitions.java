@@ -2,11 +2,13 @@ package stepDefs;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.Assertions;
 import org.assertj.core.api.Condition;
 import org.selenide.HomePage;
+import org.selenide.models.ProductModel;
 
 import java.util.List;
+
+import static stepDefs.HomePageStepDefinitions.softAssertions;
 
 public class CheckProductsStepDefinitions {
 
@@ -23,33 +25,43 @@ public class CheckProductsStepDefinitions {
     @When("I check that {int} products exist in 'POPULAR PRODUCTS' section")
     public void isExpectedCountExist(int expected) {
         int actualSize = homePage.getPopularProductsCount();
-        Assertions.assertThat(actualSize).isEqualTo(expected);
+        softAssertions.assertThat(actualSize).isEqualTo(expected);
     }
 
     @And("I check that every product has name")
     public void areAllProductsHasName() {
-        int actualSize = homePage.getProductNamesCount();
-        int expectedSize = homePage.getPopularProductsCount();
+        List<ProductModel> products = homePage.getProducts();
 
-        Assertions.assertThat(actualSize).isEqualTo(expectedSize);
+        softAssertions.assertThatList(products).haveExactly(0, new Condition<ProductModel>() {
+            @Override
+            public boolean matches(ProductModel value) {
+                String name = value.getName();
+                return name == null || name.isEmpty();
+            }
+        });
     }
 
     @And("I check that every product has price")
     public void areAllProductsHasPrice() {
-        int actualSize = homePage.getProductPriceCount();
-        int expectedSize = homePage.getPopularProductsCount();
+        List<ProductModel> products = homePage.getProducts();
 
-        Assertions.assertThat(actualSize).isEqualTo(expectedSize);
+        softAssertions.assertThatList(products).haveExactly(0, new Condition<ProductModel>() {
+            @Override
+            public boolean matches(ProductModel value) {
+                Float price = value.getNewPrice();
+                return price == null || price == 0f;
+            }
+        });
     }
 
     @And("I check that all prices bigger than {int}")
     public void areAllProductsHasPriceBiggerThan(int expected) {
-        List<Float> prices = homePage.getProductPrices();
+        List<ProductModel> products = homePage.getProducts();
 
-        Assertions.assertThatList(prices).haveExactly(0, new Condition<Float>() {
+        softAssertions.assertThatList(products).haveExactly(0, new Condition<ProductModel>() {
             @Override
-            public boolean matches(Float value) {
-                return value < expected;
+            public boolean matches(ProductModel value) {
+                return value.getNewPrice() < expected;
             }
         });
     }

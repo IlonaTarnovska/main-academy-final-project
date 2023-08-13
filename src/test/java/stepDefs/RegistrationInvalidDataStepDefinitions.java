@@ -1,11 +1,9 @@
 package stepDefs;
 
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.When;
-import org.assertj.core.api.Assertions;
-import org.selenide.HomePage;
-import org.selenide.LoginPage;
 import org.selenide.RegisterPage;
+
+import static stepDefs.HomePageStepDefinitions.softAssertions;
 
 public class RegistrationInvalidDataStepDefinitions {
 
@@ -34,13 +32,13 @@ public class RegistrationInvalidDataStepDefinitions {
     @And("I check that 'First name' highlighted in red")
     public void checkHighlightedName(){
         String color = registerPage.getNameOutlineColor();
-        Assertions.assertThat(color)
+        softAssertions.assertThat(color)
                 .isEqualTo("rgba(255, 76, 76, 1)");
     }
 
     @And("I check that pop-up with text 'Invalid format.' appear under field")
     public void checkPopUpMessage(){
-        Assertions.assertThat(registerPage.isPopUpMessageAppears())
+        softAssertions.assertThat(registerPage.isPopUpMessageAppears())
                 .isEqualTo(true);
     }
 }

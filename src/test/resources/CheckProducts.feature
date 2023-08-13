@@ -6,3 +6,4 @@ Feature: Check popular products
     Then I check that every product has name
     Then I check that every product has price
     And I check that all prices bigger than 0
+    And I check all assertions

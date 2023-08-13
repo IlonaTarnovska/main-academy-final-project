@@ -3,9 +3,10 @@ package stepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.SoftAssertions;
 import org.selenide.*;
 import org.selenide.utils.Utils;
+
+import static stepDefs.HomePageStepDefinitions.softAssertions;
 
 public class CheckoutStepDefinitions {
 
@@ -41,20 +42,17 @@ public class CheckoutStepDefinitions {
     // Check that 'TOTAL' calculated correct
 
     HomePage homePage = new HomePage();
-    SearchResultsPage searchResultsPage = new SearchResultsPage();
     ProductDetailsPage productDetailsPage = new ProductDetailsPage();
     ShoppingCartPage shoppingCartPage = new ShoppingCartPage();
     OrderConfirmationPage orderConfirmationPage = new OrderConfirmationPage();
     OrderConfirmedPage orderConfirmedPage = new OrderConfirmedPage();
 
-    SoftAssertions softAssertions = new SoftAssertions();
 
     @When("I enter {string} in the search field and press 'Enter'")
     public void searchItem(String text) {
         homePage.fillSearchField(text);
         homePage.enterSearchField();
     }
-
 
     @Then("I enter {string} in 'Product customization' field")
     public void fillCustomizationField(String text) {
@@ -156,8 +154,6 @@ public class CheckoutStepDefinitions {
 
         softAssertions.assertThat(Utils.round(actual))
                 .isEqualTo(Utils.round(expected));
-
-        softAssertions.assertAll();
     }
 
 }

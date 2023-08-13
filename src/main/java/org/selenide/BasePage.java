@@ -37,11 +37,6 @@ public class BasePage {
                 element, attName, attValue);
     }
 
-    public WebElement waitVisibility(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
-        return wait.until(ExpectedConditions.visibilityOf(element));
-    }
-
     public static void hoverMouse(WebElement element) {
         Actions action = new Actions(getDriver());
         action.moveToElement(element).perform();

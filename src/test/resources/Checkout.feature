@@ -24,3 +24,5 @@ Feature: Checkout end-to-end
     And I confirm order
     Then I should see 'YOUR ORDER IS CONFIRMED' on the next page
     And The 'TOTAL' should be calculated correctly
+    And I check all assertions
+

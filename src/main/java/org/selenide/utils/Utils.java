@@ -39,18 +39,8 @@ public class Utils {
         return Integer.parseInt(integer);
     }
 
-    public static  <T> boolean areSortEquals(List<T> list1, List<T> list2) {
-        if (list1.size() != list2.size()) {
-            return false;
-        }
-        boolean isSortEquals = true;
-        for (int i = 0; i < list1.size(); i++) {
-            if(!list1.get(i).equals(list2.get(i))) {
-                isSortEquals = false;
-                break;
-            }
-        }
-        return isSortEquals;
+    public static String removeDoneChar(String text) {
+        return text.replace("\uE876", "");
     }
 
     public static WebElement findChild(WebElement root, String path) {

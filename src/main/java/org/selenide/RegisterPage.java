@@ -1,9 +1,11 @@
 package org.selenide;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+@Slf4j
 public class RegisterPage extends BasePage{
 
     public RegisterPage() {
@@ -43,6 +45,7 @@ public class RegisterPage extends BasePage{
             String email,
             String password
     ) {
+        log.info("");
         setAttribute(genderMr, "value", "1");
         setAttribute(fNameElement, "value", firstName);
         setAttribute(lNameElement, "value", lastName);
@@ -54,14 +57,17 @@ public class RegisterPage extends BasePage{
     }
 
     public void clickSaveButton(){
+        log.info("Clicking on save button");
         makeClick(saveButtonElement);
     }
 
     public String getNameOutlineColor(){
+        log.info("Getting name outline color");
         return fNameElement.getCssValue("outline-color");
     }
 
     public boolean isPopUpMessageAppears(){
-       return invalidMessage.isDisplayed();
+        log.info("Is Pop Up message appears");
+        return invalidMessage.isDisplayed();
     }
 }

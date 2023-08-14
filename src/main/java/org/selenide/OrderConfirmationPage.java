@@ -1,5 +1,6 @@
 package org.selenide;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.selenide.utils.Utils;
 import org.selenide.utils.WaitHelper;
 
+@Slf4j
 public class OrderConfirmationPage extends BasePage{
 
     public OrderConfirmationPage() {
@@ -77,6 +79,7 @@ public class OrderConfirmationPage extends BasePage{
     public static WebElement stateDropdown;
 
     public void fillPersonalData(String firstName, String lastName, String email) {
+        log.info("Filling personal information in order confirmation page");
         setAttribute(genderMr, "value", "1");
         setAttribute(fNameElement, "value", firstName);
         setAttribute(lNameElement, "value", lastName);
@@ -89,6 +92,7 @@ public class OrderConfirmationPage extends BasePage{
     }
 
     public void fillAddressInfo(String address, String zipCode, String city){
+        log.info("Filling address information in order confirmation page");
         if (stateDropdown.isDisplayed()) {
             Select state = new Select(stateDropdown);
             state.selectByVisibleText("AA");
@@ -106,6 +110,7 @@ public class OrderConfirmationPage extends BasePage{
     }
 
     public void chooseShippingMethod(){
+        log.info("Choosing shipping method");
         makeClick(myCarrierElement);
 
         WaitHelper.clickable(continueButtonDeliveryForm);
@@ -113,22 +118,27 @@ public class OrderConfirmationPage extends BasePage{
     }
 
     public void choosePaymentMethod(){
+        log.info("Choosing Payment Method");
         makeClick(paymentChooseElement);
     }
 
     public Float getSubtotal() {
+        log.info("Getting subtotal");
         return Utils.convertPrice(subtotalElement.getText());
     }
 
     public Float getShipping() {
+        log.info("Getting shipping");
         return Utils.convertPrice(shippingElement.getText());
     }
 
     public Float getTotal() {
+        log.info("Getting total");
         return Utils.convertPrice(totalElement.getText());
     }
 
     public void confirmOrder() {
+        log.info("Confirming Order");
         WaitHelper.clickable(agreeTermsConditions);
         makeClick(agreeTermsConditions);
 

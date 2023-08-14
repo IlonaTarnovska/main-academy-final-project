@@ -1,5 +1,6 @@
 package org.selenide;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.selenide.utils.Utils;
 import org.selenide.utils.WaitHelper;
 
+@Slf4j
 public class ProductDetailsPage extends BasePage {
 
     public ProductDetailsPage() {
@@ -55,6 +57,7 @@ public class ProductDetailsPage extends BasePage {
 
 
     public void paperTypeDropdownClick(String text) {
+        log.info("Clicking on paper type dropdown");
         Select paperType = new Select(paperTypeDropdown);
         paperType.selectByVisibleText(text);
     }
@@ -68,53 +71,64 @@ public class ProductDetailsPage extends BasePage {
     }
 
     public void clickAddToCartButton() {
+        log.info("Clicking on add to cart button");
         WaitHelper.clickable(addToCartButton);
         makeClick(addToCartButton);
     }
 
     public String getModalWindowTitle() {
+        log.info("Getting modal window title");
         WaitHelper.visibility(modelWindowTitle);
         return Utils.removeDoneChar(modelWindowTitle.getText());
     }
 
     public String modalWindowPaperType() {
+        log.info("Modal window paper type");
         return paperTypeWebElement.getText();
     }
 
     public String modalWindowQuantity() {
+        log.info("Modal window quantity");
         return quantityTypeWebElement.getText();
     }
 
     public Float modalSubtotal() {
+        log.info("Modal subtotal");
         String subtotal = modalSubtotalWebElement.getText();
         return Utils.convertPrice(subtotal);
     }
 
     public Float modalCalculatedSubtotal() {
+        log.info("Modal calculated subtotal");
         Float subtotal = Utils.convertPrice(modalPriceWebElement.getText());
         Integer quantity = Integer.parseInt(modalWindowQuantity());
         return subtotal * quantity;
     }
 
     public void fillCustomizeField(String text) {
+        log.info("Filling customize field");
         productCustomizationField.sendKeys(Keys.TAB);
         productCustomizationField.clear();
         productCustomizationField.sendKeys(text);
     }
 
     public void clickOnSaveCustomizationButton() {
+        log.info("Clicking on save customization button");
         makeClick(saveCustomizationButton);
     }
 
     public void clickOnContinueShoppingButton(){
-        makeClick(modalContinueShoppingButton);
+        log.info("Clicking on continue shopping button");
+    makeClick(modalContinueShoppingButton);
     }
 
     public void clickOnColorSelectorBlack(){
+        log.info("Clicking on color selector Black");
         makeClick(colorSelectorBlack);
     }
 
     public void  clickOnModalProceedToCheckoutButton(){
+        log.info("Clicking on modal proceed to checkout button");
         WaitHelper.visibility(modalProceedToCheckoutButton);
         makeClick(modalProceedToCheckoutButton);
     }

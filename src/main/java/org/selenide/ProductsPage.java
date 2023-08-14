@@ -1,5 +1,6 @@
 package org.selenide;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -9,6 +10,7 @@ import org.selenide.utils.WaitHelper;
 
 import java.util.List;
 
+@Slf4j
 public class ProductsPage extends BasePage {
 
     @FindBy(xpath = "//button[@class='btn-unstyle select-title']")
@@ -37,40 +39,49 @@ public class ProductsPage extends BasePage {
     }
 
     public List<ProductModel> getProducts() {
+        log.info("Getting products");
         return ProductModel.create(products);
     }
 
     private void sortProducts(WebElement element) {
+        log.info("Sorting products");
         makeClick(sortingButton);
         makeClick(element);
         waitLoader();
     }
 
     public void clickNameAscDropdown() {
+        log.info("Clicking name in Asc dropdown");
         sortProducts(sortingAscending);
     }
 
     public void clickNameDescDropdown() {
+        log.info("Clicking name in Desc dropdown");
         sortProducts(sortingDescending);
     }
 
     public void clickPriceAscDropdown() {
+        log.info("Clicking price in Asc dropdown");
         sortProducts(sortingPriceAscending);
     }
 
     public void clickPriceDescDropdown() {
+        log.info("Clicking price in Desc dropdown");
         sortProducts(sortingPriceDescending);
     }
 
     public List<String> productNames() {
+        log.info("Product names");
         return CollectionUtils.convert(getProducts(), ProductModel::getName);
     }
 
     public List<Float> productPrices() {
+        log.info("Product prices");
         return CollectionUtils.convert(getProducts(), ProductModel::getNewPrice);
     }
 
     private void waitLoader() {
+        log.info("Waiting loader");
         WaitHelper.visibility(loader);
         WaitHelper.invisibility(loader);
     }

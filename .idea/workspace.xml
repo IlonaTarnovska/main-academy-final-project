@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Optimized all tests">
+    <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Fixed #10 test">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/OrderConfirmedPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/PricesDropPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/PricesDropPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/SearchResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/SearchResultsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/selenide/ShoppingCartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/selenide/ShoppingCartPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1691950310259</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fixed #10 test">
+      <created>1691953151292</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1691953151292</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,7 +342,8 @@
     <MESSAGE value="Implemented test #10" />
     <MESSAGE value="Implemented optimizations for tests" />
     <MESSAGE value="Optimized all tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimized all tests" />
+    <MESSAGE value="Fixed #10 test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed #10 test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -332,11 +352,6 @@
           <url>file://$PROJECT_DIR$/src/test/java/stepDefs/AddingToCartStepDefinitions.java</url>
           <line>60</line>
           <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/selenide/ProductDetailsPage.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/selenide/models/LanguageModel.java</url>

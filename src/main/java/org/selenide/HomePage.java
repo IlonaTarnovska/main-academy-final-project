@@ -1,5 +1,6 @@
 package org.selenide;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +11,7 @@ import org.selenide.utils.WaitHelper;
 
 import java.util.List;
 
+@Slf4j
 public class HomePage extends BasePage {
 
     public HomePage() {
@@ -80,6 +82,7 @@ public class HomePage extends BasePage {
     public WebElement searchField;
 
     public void openHomePage() {
+        log.info("Opening main page of the application");
         getDriver().get("https://demo.prestashop.com/");
         //wait for page loading
         WaitHelper.invisibility(loadingMessage, 20);
@@ -95,73 +98,90 @@ public class HomePage extends BasePage {
     }
 
     public boolean checkUpperCase() {
+        log.info("Checking upper case");
         String textTransform = subscribeButton.getCssValue("text-transform");
         return textTransform.equals("uppercase");
     }
 
     public int getLanguagesCount() {
+        log.info("Getting Languages Count");
         makeClick(dropdownLanguagesButton);
         return dropdownLanguages.size();
     }
 
     public List<String> getLanguages() {
+        log.info("Getting Languages");
         return CollectionUtils.convert(dropdownLanguages, WebElement::getText);
     }
 
     public void clickSignInButton() {
+        log.info("Clicking on sign in Button");
         makeClick(signInButton);
     }
 
     public String getLoggedInUserName() {
+        log.info("Getting logged in user Name");
         return loggedInUserName.getText();
     }
 
     public void hoverMouseOnClothesButton() {
+        log.info("Hovering mouse on clothes button");
         hoverMouse(clothesButton);
     }
 
     public void hoverMouseOnAccessoriesButton() {
+        log.info("Hovering mouse on Accessories button");
         hoverMouse(accessoriesButton);
     }
 
     public void hoverMouseOnArtButton() {
+        log.info("Hovering mouse on Art button");
         hoverMouse(artButton);
     }
 
     public List<String> getClothesDropdownElement() {
+        log.info("Getting clothes dropdown element");
         return CollectionUtils.convert(clothesPopUp, WebElement::getText);
     }
 
     public List<String> getAccessoriesDropdownElement() {
+        log.info("Getting accessories dropdown element");
         return CollectionUtils.convert(accessoriesPopUp, WebElement::getText);
     }
 
     public List<String> getArtDropdownElement() {
+        log.info("Getting Art dropdown element");
         return CollectionUtils.convert(artPopUp, WebElement::getText);
     }
 
     public int getPopularProductsCount() {
+        log.info("Getting popular products count");
         return popularProducts.size();
     }
 
     public List<ProductModel> getProducts() {
+        log.info("Getting products");
         return ProductModel.create(popularProducts);
     }
 
     public void pricesDropLinkClick() {
+        log.info("Clicking on prices drop link ");
         makeClick(pricesDropLink);
     }
 
     public void clickAllProductsLink() {
+        log.info("Clicking on All Products link");
         makeClick(allProductsLink);
     }
 
     public void fillSearchField(String text) {
+        log.info("Filling the search field");
         searchField.sendKeys(Keys.CLEAR);
         searchField.sendKeys(text);
     }
 
     public void enterSearchField() {
+        log.info("Entering the search field");
         searchField.sendKeys(Keys.ENTER);
     }
 

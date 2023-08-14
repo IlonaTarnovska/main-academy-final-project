@@ -1,0 +1,73 @@
+[ERROR] 2023-08-14 15:34:20 HttpClient:171 :execute - message:Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+[WARN ] 2023-08-14 15:34:20 VersionDetector:123 :getDriverVersionFromRepository - message:Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+[INFO ] 2023-08-14 15:34:20 WebDriverManager:1021 :exportDriver - message:Exporting webdriver.chrome.driver as C:\Users\Ilona_Tarnovska\.cache\selenium\chromedriver\win32\114.0.5735.90\chromedriver.exe
+[INFO ] 2023-08-14 15:34:23 HomePage:85 :openHomePage - message:Opening main page of the application
+[INFO ] 2023-08-14 15:34:27 HomePage:107 :getLanguagesCount - message:Getting Languages Count
+[INFO ] 2023-08-14 15:34:28 HomePage:113 :getLanguages - message:Getting Languages
+[WARN ] 2023-08-14 15:34:29 WebSocketHandler:142 :handleException - message:onError
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+[ERROR] 2023-08-14 15:35:40 HttpClient:171 :execute - message:Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115
+[WARN ] 2023-08-14 15:35:40 VersionDetector:123 :getDriverVersionFromRepository - message:Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115 to get latest version of chromedriver (Error HTTP 404 executing https://chromedriver.storage.googleapis.com/LATEST_RELEASE_115)
+[INFO ] 2023-08-14 15:35:40 WebDriverManager:1021 :exportDriver - message:Exporting webdriver.chrome.driver as C:\Users\Ilona_Tarnovska\.cache\selenium\chromedriver\win32\114.0.5735.90\chromedriver.exe
+[INFO ] 2023-08-14 15:35:42 HomePage:85 :openHomePage - message:Opening main page of the application
+[INFO ] 2023-08-14 15:35:53 HomePage:178 :fillSearchField - message:Filling the search field
+[INFO ] 2023-08-14 15:35:53 HomePage:184 :enterSearchField - message:Entering the search field
+[INFO ] 2023-08-14 15:35:54 SearchResultsPage:27 :clickOnProductWithText - message:Clicking on product with text
+[INFO ] 2023-08-14 15:35:54 SearchResultsPage:22 :getProducts - message:Getting products
+[INFO ] 2023-08-14 15:36:00 ProductDetailsPage:109 :fillCustomizeField - message:Filling customize field
+[INFO ] 2023-08-14 15:36:00 ProductDetailsPage:116 :clickOnSaveCustomizationButton - message:Clicking on save customization button
+[INFO ] 2023-08-14 15:36:05 ProductDetailsPage:74 :clickAddToCartButton - message:Clicking on add to cart button
+[INFO ] 2023-08-14 15:36:05 ProductDetailsPage:121 :clickOnContinueShoppingButton - message:Clicking on continue shopping button
+[INFO ] 2023-08-14 15:36:05 HomePage:178 :fillSearchField - message:Filling the search field
+[INFO ] 2023-08-14 15:36:07 HomePage:184 :enterSearchField - message:Entering the search field
+[INFO ] 2023-08-14 15:36:08 SearchResultsPage:27 :clickOnProductWithText - message:Clicking on product with text
+[INFO ] 2023-08-14 15:36:08 SearchResultsPage:22 :getProducts - message:Getting products
+[INFO ] 2023-08-14 15:36:13 ProductDetailsPage:126 :clickOnColorSelectorBlack - message:Clicking on color selector Black
+[INFO ] 2023-08-14 15:36:13 ProductDetailsPage:74 :clickAddToCartButton - message:Clicking on add to cart button
+[INFO ] 2023-08-14 15:36:13 ProductDetailsPage:131 :clickOnModalProceedToCheckoutButton - message:Clicking on modal proceed to checkout button
+[INFO ] 2023-08-14 15:36:22 ShoppingCartPage:44 :getTotalPrice - message:Getting total price
+[INFO ] 2023-08-14 15:36:22 ShoppingCartPage:34 :getCalculatedTotalPrice - message:Getting calculated total price
+[INFO ] 2023-08-14 15:36:22 ShoppingCartPage:29 :getProducts - message:Getting products
+[INFO ] 2023-08-14 15:36:23 ShoppingCartPage:49 :clickProceedToCheckoutButton - message:Clicking on proceed to checkout button
+[INFO ] 2023-08-14 15:36:28 OrderConfirmationPage:82 :fillPersonalData - message:Filling personal information in order confirmation page
+[INFO ] 2023-08-14 15:36:34 OrderConfirmationPage:95 :fillAddressInfo - message:Filling address information in order confirmation page
+[INFO ] 2023-08-14 15:36:40 OrderConfirmationPage:113 :chooseShippingMethod - message:Choosing shipping method
+[INFO ] 2023-08-14 15:36:45 OrderConfirmationPage:121 :choosePaymentMethod - message:Choosing Payment Method
+[INFO ] 2023-08-14 15:36:45 OrderConfirmationPage:136 :getTotal - message:Getting total
+[INFO ] 2023-08-14 15:36:45 OrderConfirmationPage:131 :getShipping - message:Getting shipping
+[INFO ] 2023-08-14 15:36:45 OrderConfirmationPage:126 :getSubtotal - message:Getting subtotal
+[INFO ] 2023-08-14 15:36:45 OrderConfirmationPage:141 :confirmOrder - message:Confirming Order
+[INFO ] 2023-08-14 15:36:50 OrderConfirmedPage:29 :getConfirmedTitle - message:Getting Confirmed title
+[INFO ] 2023-08-14 15:36:51 OrderConfirmedPage:34 :getTotal - message:Getting total
+[INFO ] 2023-08-14 15:36:51 OrderConfirmedPage:40 :getSubtotal - message:Getting subtotal
+[INFO ] 2023-08-14 15:36:51 OrderConfirmedPage:45 :getShipping - message:Geting shipping
+[WARN ] 2023-08-14 15:36:51 WebSocketHandler:142 :handleException - message:onError
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1623)

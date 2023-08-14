@@ -3,7 +3,7 @@ Welcome to the Main Academy Final Project repository! This is the culmination of
 
 ## Project Overview
 
-Our Main Academy Final Project aims to create a dynamic and engaging e-commerce platform that revolutionizes online shopping. By incorporating cutting-edge technologies and user-centered design principles, we intend to provide users with a seamless shopping experience that goes beyond traditional online marketplaces.
+Our Main Academy Final Project aims to create a dynamic and engaging testing platform that revolutionizes online shopping. By incorporating cutting-edge technologies and user-centered design principles, we intend to provide users with a seamless shopping experience that goes beyond traditional online marketplaces.
 
 ## Getting Started
 

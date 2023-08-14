@@ -11,6 +11,18 @@
   <url>http://maven.apache.org</url>
 
   <properties>
+    <systemProperties>
+
+      <property>
+
+        <name>allure.results.directory</name>
+
+        <value>${project.build.directory}/reports/allure-results</value>
+
+      </property>
+
+    </systemProperties>
+
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 

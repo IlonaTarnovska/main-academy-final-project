@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ce61e1-5358-4112-94d6-6ce6f1c215c7" name="Changes" comment="Fixed logs">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/testng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/runner/CucumberRunnerTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +39,62 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ilona_Tarnovska/IdeaProjects/main-academy-final-project/src/main/java/org/selenide/utils&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/vlad/IdeaProjects/main-academy-final-project/src/main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vcs.patch.path&quot;: &quot;/Users/vlad/Downloads&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main" />
       <recent name="C:\Users\Ilona_Tarnovska\IdeaProjects\main-academy-final-project\src\main\java\org\selenide\utils" />
       <recent name="C:\Users\Ilona_Tarnovska\IdeaProjects\main-academy-final-project\src\main\java\org\selenide\models" />
       <recent name="C:\Users\Ilona_Tarnovska\IdeaProjects\main-academy-final-project\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="allure" />
       <recent name="stepDefs" />
+      <recent name="org.Hooks" />
       <recent name="org.selenide" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Checking  end-to-end">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn allure generate" />
+      <command value="mvn ʼallure:report  " />
+      <command value="mvn allure:report  " />
+      <command value="mvn allure::report clean" />
+      <command value="mvn allure::report test" />
+      <command value="mvn allure::report site" />
+      <command value="mvn allure serve target/allure-results" />
+      <command value="mvn mvn clean test -Dtest=aaaTestClass  io.qameta.allure:allure-maven:report " />
+      <command value="mvn clean test -Dtest=aaaTestClass  io.qameta.allure:allure-maven:report " />
+      <command value="mvn clean test" />
+      <command value="mvn allure::serve" />
+      <command value="mvn allure::report" />
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="TestNG.CucumberRunnerTests">
+    <configuration name="Feature: AddingToCartCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/AddingToCartCheck.feature" />
+      <option name="GLUE" value="stepDefs org.Hooks" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="final-project" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: AddingToCartCheck" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Feature: LanguagesCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/LanguagesCheck.feature" />
@@ -60,44 +103,6 @@
       <module name="final-project" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
       <option name="SUGGESTED_NAME" value="Feature: LanguagesCheck" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: SortingCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/SortingCheck.feature" />
-      <option name="GLUE" value="stepDefs org.Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="final-project" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: SortingCheck" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Feature: SubscriptionMessagesCheck" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/SubscriptionMessagesCheck.feature" />
-      <option name="GLUE" value="stepDefs org.Hooks" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="final-project" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <option name="SUGGESTED_NAME" value="Feature: SubscriptionMessagesCheck" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -149,20 +154,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CucumberRunnerTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="final-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="runner" />
+      <option name="MAIN_CLASS_NAME" value="runner.CucumberRunnerTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Feature: AddingToCartCheck" />
       <item itemvalue="Cucumber Java.Feature: LanguagesCheck" />
-      <item itemvalue="Cucumber Java.Feature: SortingCheck" />
-      <item itemvalue="Cucumber Java.Feature: SubscriptionMessagesCheck" />
       <item itemvalue="Cucumber Java.Scenario: Checking  end-to-end" />
       <item itemvalue="Cucumber Java.Scenario: Verify available languages" />
+      <item itemvalue="TestNG.CucumberRunnerTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CucumberRunnerTests" />
+        <item itemvalue="Cucumber Java.Feature: AddingToCartCheck" />
         <item itemvalue="Cucumber Java.Scenario: Checking  end-to-end" />
         <item itemvalue="Cucumber Java.Scenario: Verify available languages" />
         <item itemvalue="Cucumber Java.Feature: LanguagesCheck" />
-        <item itemvalue="Cucumber Java.Feature: SubscriptionMessagesCheck" />
-        <item itemvalue="Cucumber Java.Feature: SortingCheck" />
       </list>
     </recent_temporary>
   </component>
@@ -315,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692016678859</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="allure with problems">
+      <option name="closed" value="true" />
+      <created>1692025807892</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1692025807892</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,7 +380,8 @@
     <MESSAGE value="Fixed #10 test" />
     <MESSAGE value="Added changes to pom.xml" />
     <MESSAGE value="Fixed logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed logs" />
+    <MESSAGE value="allure with problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="allure with problems" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
